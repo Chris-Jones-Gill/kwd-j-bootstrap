@@ -110,7 +110,7 @@ PLANNED FEATURES
 		- Menu
 	+ Row 18
 		- Copyright
-		- Navigation row, fixed to the top of the screen
+		- Navigation row, fixed to the bottom of the screen
   
 Contributing
 ============
