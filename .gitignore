@@ -1,0 +1,19 @@
+# KWD always ignore these
+*.bak
+.cache
+.DS_Store
+*.diff
+*.err
+*.log
+*.orig
+.project
+*.rej
+.settings
+*.swo
+*.swp
+Thumbs.db
+*.vi
+*.zip
+*~
+._*
+# KWD project specific ignores
