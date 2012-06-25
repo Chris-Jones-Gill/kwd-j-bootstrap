@@ -25,9 +25,6 @@ $SiteLogo				= $this->params->get('SiteLogo');
 // Check for modules in columns
 // from http://groups.google.com/group/joomla-dev-general/bse_thread/thread/b54f3f131dd173d
 
-/*
-*/
-
 $navTop = (int) ($this->countModules('nav-top') > 0);
 $navR1 = (int) ($this->countModules('nav-r1') > 0);
 
@@ -224,13 +221,13 @@ $activateTopNav = $this->params->get('bottomnav');
  * 	End of column width settings
 /* ===================================================================== */
 
-#-----------------------------See if we are on the homepage-----------------------------#
+//-----------------------------See if we are on the homepage-----------------------------
 // from Anthony Olsen of Joomla Bamboo, http://www.joomlabamboo.com
 
 $activeMenu = & JSite::getMenu();
 if ($activeMenu->getActive() == $activeMenu->getDefault()) {$siteHome = 'home';}else{$siteHome = 'sub';}
 
-#----------------------------- Construct Code Snippets -----------------------------#
+//----------------------------- Construct Code Snippets -----------------------------
 // GPL code taken from Construct template framework by Matt Thomas http://construct-framework.com/
 
 // To enable use of site configuration
@@ -287,20 +284,14 @@ if ($googleWebFont3) {
 	$doc->addStyleSheet('http://fonts.googleapis.com/css?family='.$googleWebFont3.'');
 	$doc->addStyleDeclaration('  '.$googleWebFontTargets3.' {font-family:'.$googleWebFontFamily3.';}');
 }
-#----------------------------- End Construct Code Snippets -----------------------------#
+//----------------------------- End Construct Code Snippets -----------------------------
 
 
-#----------------------------- Inject extras into the head -----------------------------#
+//----------------------------- Inject extras into the head -----------------------------
 // Musthave JS
 if ($jQuery) {
   $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');
 }
-
-// Site icons
-$doc->addFavicon($template.'/img/small/apple-touch-icon.png','image/png','shortcut icon');
-$doc->addFavicon($template.'/img/small/apple-touch-icon-precomposed.png','image/png','apple-touch-icon-precomposed');
-$doc->addCustomTag('<link href="'.$template.'/img/medium/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="72x72">');
-$doc->addCustomTag('<link href="'.$template.'/img/large/apple-touch-icon.png" rel="apple-touch-icon-precomposed" sizes="114x114">');
 
 // Metas
 $doc->setMetaData( 'HandheldFriendly', 'True' );
@@ -315,8 +306,4 @@ $doc->setMetaData( 'X-UA-Compatible', 'IE=edge,chrome=1', true );
 $doc->addCustomTag('<!--[if (lt IE 9) & (!IEMobile)]>');
 $doc->addCustomTag('<script src="'.$template.'/js/libs/selectivizr-min.js"></script>');
 $doc->addCustomTag('<![endif]-->');
-
-$doc->addCustomTag('<!--[if lt IE 7 ]>');
-$doc->addCustomTag('<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script></script>');
-$doc->addCustomTag('<![endif]-->');
-#----------------------------- End head code -----------------------------#
+//----------------------------- End head code -----------------------------

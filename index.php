@@ -70,10 +70,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
-
 </head>
 <body class="<?php echo htmlspecialchars($bodyFontFamily); ?> clearfix">
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
+// now do the semantic html5 layout
 <div id="logoRow">
     <div class="container">
          <div class="row clearfix">
