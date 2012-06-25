@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>kwd-j-bootstrap</name>
+	<creationDate>June 25 2012</creationDate>
+	<author>Chris Jones-Gill</author>
+	<authorEmail>chris.jones-gill@kisswebdesign.co.uk</authorEmail>
+	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
+	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>0.1</version>	
+	<description>
+		<![CDATA[
+			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
+			<p>It follows the <a href="http://www.w3.org/TR/mobile-bp/#OneWeb">'One Web'</a> philosophy - designing websites that can be delivered to all screens and devices, present and future</p>
+			<p>It is based on <a href="https://github.com/twitter/bootstrap">twitter/bootstrap</a> version 2.0.3</p>
+			<p>Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own <a href="https://github.com/KISS-Web-Design/bootstrap">baseline bootstrap</a>.</p>
+			<p>This template is taken from our baseline, not the original twitter/bootstrap</p>
+		]]>
+	</description>
+		
+	<files>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>CreativeCommons-by-sa-3.0.txt</filename>
+        <filename>gpl-2.0.txt</filename>
+        <filename>mit-licence.txt</filename>
+        <filename>templateDetails.xml</filename>
+		<folder>assets</folder>
+		<folder>functions</folder>
+		<folder>html</folder>
+	</files>
+	
+	<positions>
+		<position>nav-top</position>
+		<position>nav-r1</position>
+		<position>section-r2-1</position>
+		<position>section-r2-2</position>
+		<position>section-r2-3</position>
+		<position>nav-r3</position>
+		<position>section-r4</position>
+		<position>nav-r5</position>
+		<position>section-r6-1</position>
+		<position>section-r6-2</position>
+		<position>section-r6-3</position>
+		<position>section-r6-4</position>
+		<position>section-r7-1</position>
+		<position>section-r7-2</position>
+		<position>section-r7-3</position>
+		<position>section-r7-4</position>
+		<position>nav-r8</position>
+		<position>section-main-left</position>
+		<position>section-main</position>
+		<position>section-main-right</position>
+		<position>section-r10-1</position>
+		<position>section-r10-2</position>
+		<position>section-r10-3</position>
+		<position>section-r10-4</position>
+		<position>section-r11-1</position>
+		<position>section-r11-2</position>
+		<position>section-r11-3</position>
+		<position>section-r11-4</position>
+		<position>section-r12</position>
+		<position>section-r13-1</position>
+		<position>section-r13-2</position>
+		<position>section-r13-3</position>
+		<position>section-r13-4</position>
+		<position>nav-r14</position>
+		<position>nav-bottom</position>
+	</positions>
+		
+	<config>
+		<fields name="params">
+			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/kwd-j-bootstrap/functions" >
+				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a lot of Kb by not loading it. Setting this to no will also disable caption.js">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" default=" " />
+				<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load the latest, minified, version of jQuery from Google?">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" default=" " />
+				<field name="setGeneratorTag" type="text" default="KISS Web Design - Joomla! Bootstrap Template" label="Generator Meta Tag" description="Customise the generator meta tag output by your template." size="85" />
+				<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" />
+			</fieldset>				
+		
+			<fieldset name="Typography" label="Typography">					
+				<field name="bodyFontFamily" type="list" default="" label="The Body Font">
+					<option value="">- None Selected -</option>
+					<option value="arial">Arial</option>
+					<option value="arial-black">Arial Black</option>
+					<option value="courier">Courier New</option>			
+					<option value="georgia">Georgia</option>
+					<option value="helvetica">Helvetica</option>
+					<option value="impact">Impact</option>			
+					<option value="lucida-console">Lucida Console</option>	
+					<option value="lucida-grande">Lucida Grande</option>								
+					<option value="lucida-sans">Lucida Sans</option>
+					<option value="palatino">Palatino</option>			
+					<option value="tahoma">Tahoma</option>
+					<option value="times">Times New Roman</option>
+					<option value="trebuchet">Trebuchet</option>
+					<option value="verdana">Verdana</option>
+				</field>
+				<field type="spacer" default=" " />				
+				<field name="googleWebFont" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />
+				<field type="spacer" default=" " />
+				<field name="googleWebFont2" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets2" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50"/>		
+				<field type="spacer" default=" " />
+				<field name="googleWebFont3" type="googlewebfont" default="" label="Google Web Font" description="The Google Web font to be applied to the designated targets below. Visit http://code.google.com/webfonts for more information." />										
+				<field name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />								
+			</fieldset>
+
+			<fieldset name="Top Navigation Bars" label="Activate Top Navigation bars">
+				<field name="topnav" type="radio" default="1" label="Activate Fixed Navigation Top?" description="Use a menu that stays visible at the top of the screen.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="navr1" type="radio" default="0" label="Activate standard Navigation Top?" description="Use a menu that scrolls with the window, displayed at the top of the page.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+			</fieldset>
+			
+			<fieldset name="Logo Upload and Logo Row Module Widths" label="Logo Upload and Logo Row Module Widths">
+				<field name="SiteLogo" type="media" hide_default="1" default="templates/kwd-j-bootstrap/assets/img/logo/kwd-j-bootstrap.png" label="Logo" description="Select or upload a logo. Default position is section-r2-1"/>
+                <field name="logo" type="list" default="four" label="logo width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+							
+			<field name="tagline" type="list" default="four" label="tagline width" description="Default position is section-r2-2">
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				
+			<field name="search" type="list" default="four" label="search width" description="Default position is section-r2-3">
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>	
+
+			<fieldset name="R3 Navigation" label="Activate Navigation on Row 3">
+				<field name="navr3" type="radio" default="0" label="Activate standard Navigation?" description="Use a menu that scrolls with the window, displayed in row 3.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+			</fieldset>
+
+			<fieldset name="Position Spans Row 4" label="Span for Positions on Row 4">
+                <field name="section-r4" type="list" default="twelve" label="Section Row 4 position width" >
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="R5 Navigation" label="Activate Navigation on Row 3">
+				<field name="navr5" type="radio" default="0" label="Activate standard Navigation?" description="Use a menu that scrolls with the window, displayed in row 5.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+			</fieldset>
+			
+			<fieldset name="Position Spans Row 6" label="Span for Positions on Row 6">
+				<field name="CalculateR6" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="section-r6-1" type="list" default="three" label="Section Row 6 position 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r6-2" type="list" default="three" label="Section Row 6 position 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r6-3" type="list" default="three" label="Section Row 6 position 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r6-4" type="list" default="three" label="Section Row 6 position 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+
+			<fieldset name="Position Spans Row 7" label="Span for Positions on Row 7">
+				<field name="CalculateR7" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="section-r7-1" type="list" default="three" label="Section Row 7 position 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r7-2" type="list" default="three" label="Section Row 7 position 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r7-3" type="list" default="three" label="Section Row 7 position 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r7-4" type="list" default="three" label="Section Row 7 position 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+
+			<fieldset name="R8 Navigation" label="Activate Navigation on Row 8">
+				<field name="navr8" type="radio" default="0" label="Activate standard Navigation?" description="Use a menu that scrolls with the window, displayed in row 8.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+			</fieldset>
+			
+			<fieldset name="Main Row Module Widths" label="Main Row Module Widths">
+				<field name="CalculateMain" type="radio" default="1" label="Auto Calculate columns required?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                			<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="mainleft" type="list" default="three" label="left width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="maincontent" type="list" default="six" label="main content width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="mainright" type="list" default="three" label="right width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>	
+
+			<fieldset name="Position Spans Row 10" label="Span for Positions on Row 10">
+				<field name="CalculateR10" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="section-r10-1" type="list" default="three" label="Section Row 10 position 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r10-2" type="list" default="three" label="Section Row 10 position 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r10-3" type="list" default="three" label="Section Row 10 position 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r10-4" type="list" default="three" label="Section Row 10 position 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+
+			<fieldset name="Position Spans Row 11" label="Span for Positions on Row 11">
+				<field name="CalculateR7" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="section-11-1" type="list" default="three" label="Section Row 11 position 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r11-2" type="list" default="three" label="Section Row 11 position 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r11-3" type="list" default="three" label="Section Row 11 position 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r11-4" type="list" default="three" label="Section Row 11 position 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+
+			<fieldset name="Position Spans Row 12" label="Span for Positions on Row 12">
+                <field name="section-r12" type="list" default="twelve" label="Section Row 12 position 1 width" >
+					<option value="twelve">twelve</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="Position Spans Row 13" label="Span for Positions on Row 13">
+				<field name="CalculateR13" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+                <field name="section-13-1" type="list" default="three" label="Section Row 13 position 1 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r13-2" type="list" default="three" label="Section Row 13 position 2 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r13-3" type="list" default="three" label="Section Row 13 position 3 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+				<field name="section-r13-4" type="list" default="three" label="Section Row 13 position 4 width" >
+					<option value="one">one</option>
+					<option value="two">two</option>
+					<option value="three">three</option>
+					<option value="four">four</option>
+					<option value="five">five</option>
+					<option value="six">six</option>
+					<option value="seven">seven</option>
+					<option value="eight">eight</option>
+					<option value="nine">nine</option>
+					<option value="ten">ten</option>
+					<option value="eleven">eleven</option>
+					<option value="twelve">twelve</option>
+				</field>
+            </fieldset>	
+
+			<fieldset name="Bottom Navigation Bars" label="Activate Bottom Navigation bars">
+				<field name="navr14" type="radio" default="0" label="Activate standard Navigation Bottom?" description="Use a menu that scrolls with the window, displayed at the bottom of the page.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="bottomnav" type="radio" default="0" label="Activate Fixed Navigation Bottom?" description="Use a menu that stays visible at the bottom of the screen.">
+                	<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>
