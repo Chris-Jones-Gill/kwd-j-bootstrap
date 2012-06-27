@@ -93,6 +93,7 @@ $activateNavR1 = $this->params->get('navr1');
 $logoCols = $this->params->get('logo');			// section-r2-1
 $taglineCols = $this->params->get('tagline');	// section-r2-2
 $searchCols = $this->params->get('search');		// section-r2-3
+$sectionColsR2d = $this->params->get('section-r2-4');
 
 $activateNavR3 = $this->params->get('navr3');
 
@@ -104,7 +105,7 @@ if ($this->params->get('CalculateR6')) {
 	// Divide the total columns by the number of active modules
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
-	if(($sectionR6a + $sectionR6b + $sectionR6c + $sectionR6d) != 0) {$sectionR6cols = int_to_words(12/($sectionR6a + $sectionR6b + $sectionR6c + $sectionR6d));} else {$sectionR6cols = 0;}
+	if(($sectionR6a + $sectionR6b + $sectionR6c + $sectionR6d) != 0) {$sectionR6cols = (12/($sectionR6a + $sectionR6b + $sectionR6c + $sectionR6d));} else {$sectionR6cols = 0;}
 	$sectionColsR6a = $this->params->set('section-r6-1', $sectionR6cols);
 	$sectionColsR6b = $this->params->set('section-r6-2', $sectionR6cols);
 	$sectionColsR6c = $this->params->set('section-r6-3', $sectionR6cols);
@@ -122,7 +123,7 @@ if ($this->params->get('CalculateR7')) {
 	// Divide the total columns by the number of active modules
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
-	if(($sectionR7a + $sectionR7b + $sectionR7c + $sectionR7d) != 0) {$sectionR7cols = int_to_words(12/($sectionR7a + $sectionR7b + $sectionR7c + $sectionR7d));} else {$sectionR7cols = 0;}
+	if(($sectionR7a + $sectionR7b + $sectionR7c + $sectionR7d) != 0) {$sectionR7cols = (12/($sectionR7a + $sectionR7b + $sectionR7c + $sectionR7d));} else {$sectionR7cols = 0;}
 	$sectionColsR7a = $this->params->set('section-r7-1', $sectionR7cols);
 	$sectionColsR7b = $this->params->set('section-r7-2', $sectionR7cols);
 	$sectionColsR7c = $this->params->set('section-r7-3', $sectionR7cols);
@@ -139,16 +140,16 @@ else {
 $activateNavR8 = $this->params->get('navr8');
 
 if ($this->params->get('CalculateMain')) {
-	$mainLeftCols = $this->params->set('mainleft', 'three');
-	$mainRightCols = $this->params->set('mainright', 'three');
+	$mainLeftCols = $this->params->set('mainleft', '3');
+	$mainRightCols = $this->params->set('mainright', '3');
 	if (($sectionMainRight == "0") && ($sectionMainLeft == "0")) {
-		$mainContentCols = $this->params->set('maincontent', 'twelve');
+		$mainContentCols = $this->params->set('maincontent', '12');
 	}
 	else if (($sectionMainRight != "0") && ($sectionMainLeft !="0")){
-		$mainContentCols = $this->params->set('maincontent', 'six');
+		$mainContentCols = $this->params->set('maincontent', '6');
 	}
 	else if (($sectionMainRight == "0") || ($sectionMainLeft == "0")) {
-		$mainContentCols = $this->params->set('maincontent', 'nine');
+		$mainContentCols = $this->params->set('maincontent', '9');
 	}
 }
 else {
@@ -162,7 +163,7 @@ if ($this->params->get('CalculateR10')) {
 	// Divide the total columns by the number of active modules
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
-	if(($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d) != 0) {$sectionR10cols = int_to_words(12/($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d));} else {$sectionR10cols = 0;}
+	if(($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d) != 0) {$sectionR10cols = (12/($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d));} else {$sectionR10cols = 0;}
 	$sectionColsR10a = $this->params->set('section-R10-1', $sectionR10cols);
 	$sectionColsR10b = $this->params->set('section-R10-2', $sectionR10cols);
 	$sectionColsR10c = $this->params->set('section-R10-3', $sectionR10cols);
@@ -180,7 +181,7 @@ if ($this->params->get('CalculateR11')) {
 	// Divide the total columns by the number of active modules
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
-	if(($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d) != 0) {$sectionR11cols = int_to_words(12/($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d));} else {$sectionR11cols = 0;}
+	if(($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d) != 0) {$sectionR11cols = (12/($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d));} else {$sectionR11cols = 0;}
 	$sectionColsR11a = $this->params->set('section-R11-1', $sectionR11cols);
 	$sectionColsR11b = $this->params->set('section-R11-2', $sectionR11cols);
 	$sectionColsR11c = $this->params->set('section-R11-3', $sectionR11cols);
@@ -200,7 +201,7 @@ if ($this->params->get('CalculateR13')) {
 	// Divide the total columns by the number of active modules
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
-	if(($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d) != 0) {$sectionR13cols = int_to_words(12/($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d));} else {$sectionR13cols = 0;}
+	if(($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d) != 0) {$sectionR13cols = (12/($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d));} else {$sectionR13cols = 0;}
 	$sectionColsR13a = $this->params->set('section-R13-1', $sectionR13cols);
 	$sectionColsR13b = $this->params->set('section-R13-2', $sectionR13cols);
 	$sectionColsR13c = $this->params->set('section-R13-3', $sectionR13cols);
@@ -288,6 +289,13 @@ if ($googleWebFont3) {
 
 
 //----------------------------- Inject extras into the head -----------------------------
+    //<!-- Le styles -->
+    $doc->addStyleSheet($template.'/assets/css/bootstrap.css');
+    $doc->addStyleSheet($template.'/assets/css/bootstrap-responsive.css');
+    $doc->addStyleSheet($template.'/assets/css/docs.css');
+    $doc->addStyleSheet($template.'/assets/js/google-code-prettify/prettify.css');
+    
+    
 // Musthave JS
 if ($jQuery) {
   $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');

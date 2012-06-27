@@ -15,14 +15,8 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <!doctype html>
 <head>
 <jdoc:include type="head" />
-    <!-- Le styles -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-<?php
-// Now do the IE specific stuff
-?>
+
+<!-- Now do the IE specific stuff -->
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
@@ -71,347 +65,389 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
 </head>
-<body class="<?php echo htmlspecialchars($bodyFontFamily); ?> clearfix">
+
+<body class="<?php echo htmlspecialchars($bodyFontFamily); ?>"data-spy="scroll" data-target=".subnav" data-offset="50">
+
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
-// now do the semantic html5 layout
-<div id="logoRow">
-    <div class="container">
-         <div class="row clearfix">
-         	<a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename'));?>">
-            	<header id="logo" class="<?php echo htmlspecialchars($logoCols); ?>col">
-						<img border="0" alt="<?php echo htmlspecialchars($app->getCfg('sitename'));?> Logo" src="<?php echo $this->baseurl ?>/<?php echo $SiteLogo;?>">	
-                    <div id="logotext"><?php echo htmlspecialchars($app->getCfg('sitename'));?></div>     
-             	</header>
-             </a> 
-            <?php if ($tagline > 0) {
-              	if($debug) { ?>
-                    <div id="tagline" class="<?php echo htmlspecialchars($taglineCols); ?>col<?php if ($searchCols == 0) {echo " last";} ?>" style="border : 1px solid black;">
-                <?php } else { ?>
-                	<div id="tagline" class="<?php echo htmlspecialchars($taglineCols); ?>col<?php if ($searchCols == 0) {echo " last";} ?>">
-                <?php } ?>
-                        <jdoc:include type="modules" name="tagline" style="html5" />
-                    </div>
-            <?php } ?>	
-            <?php if ($search > 0) {
-            	if($debug) { ?>
-                    <div role="search" id="search" class="<?php echo htmlspecialchars($searchCols); ?>col last"  style="border : 1px solid black;">
-               	<?php } else { ?>
-                    <div role="search" id="search" class="<?php echo htmlspecialchars($searchCols); ?>col last">
-                <?php } ?>
-                      <jdoc:include type="modules" name="search" style="html5" />
-                  </div>
-            <?php } ?> 
-         </div>	
-    </div>  
-</div>
-<?php if ($menu > 0) { ?>
-<header id="navRow">
-    <div class="container">
-        <div class="row clearfix">
-            <div id="mobileMenu" class="mobile">
-            	Menu
-            </div>
-                <?php if($debug) { ?>
-                    <nav id="menu" role="navigation" class="twelvecol clearfix"  style="border : 1px solid black;">
-                <?php } else { ?>
-                    <nav id="menu" role="navigation" class="twelvecol clearfix">
-                <?php } ?>
-                        <jdoc:include type="modules" name="menu" style="html5" />
-                    </nav>          
-        </div>
-    </div>
-</header>
-<?php } ?>
-<?php if ($breadcrumbs > 0) { ?>
-<header id="breadcrumbRow">
-    <div class="container">
-        <div class="row clearfix">
-        	<?php if($debug) { ?>      
-            	<nav id="breadcrumbs" role="navigation" class="twelvecol clearfix" style="border : 1px solid black;">
-            <?php } else { ?>
-            	<nav id="breadcrumbs" role="navigation" class="twelvecol clearfix">
-            <?php } ?>
-                <jdoc:include type="modules" name="breadcrumbs" style="html5" />
-            </nav>
-        </div>
-    </div>
-</header>
-<?php } ?>
-<?php if ($bigtop > 0) { ?>
-<header id="BigTopRow">
-    <div class="container">
-        <div class="row clearfix">
-        	<?php if($debug) { ?>      
-            	<div id="bigtop" class="twelvecol clearfix" style="border : 1px solid black;"> 
-            <?php } else { ?>
-            	<div id="bigtop" class="twelvecol clearfix"> 
-            <?php } ?>
-                <jdoc:include type="modules" name="bigtop" style="html5" />
-            </nav>
-        </div>
-    </div>
-</header>
-<?php } ?>
-<?php if ($bannerModules > 0) { ?>
-<header id="bannerRow">
-    <div class="container">
-         <div class="row clearfix">
-            <?php if ($banner1 > 0) { ?>
-            	<?php if($debug) { ?>
-                	<div role="banner" id="banner1" class="<?php echo htmlspecialchars($banner1Cols); ?>col<?php if ($banner2 == 0) {echo " last";} ?>" style="border : 1px solid black; margin-right: 3.5%">
-               	<?php } else { ?>
-                	<div role="banner" id="banner1" class="<?php echo htmlspecialchars($banner1Cols); ?>col<?php if ($banner2 == 0) {echo " last";} ?>">
-               	<?php } ?>
-                    <jdoc:include type="modules" name="banner1" style="html5" />
-                </div>
-            <?php } ?>
-            <?php if ($banner2 > 0) { ?>
-            	<?php if($debug) { ?>
-                	<div role="banner" id="banner2" class="<?php echo htmlspecialchars($banner2Cols); ?>col last" style="border : 1px solid black;">
-                <?php } else { ?>
-                	<div role="banner" id="banner2" class="<?php echo htmlspecialchars($banner2Cols); ?>col last">
-                <?php } ?>                
-                    <jdoc:include type="modules" name="banner2" style="html5" />
-                </div>
-            <?php } ?>
-         </div>	
-    </div>  
-</header>
-<?php } ?>
-<?php if ($aboveModules > 0) { ?>
-<div id="aboveRow">
-      <div class="container">
-          <div class="row clearfix">
-          	<?php if ($above1 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="above1" class="<?php echo htmlspecialchars($above1Cols); ?>col<?php if (($above2+$above3+$above4) == 0) {echo " last";} ?>" style="border : 1px solid black; <?php if(($above2+$above3+$above4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="above1" class="<?php echo htmlspecialchars($above1Cols); ?>col<?php if (($above2+$above3+$above4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-                    	<jdoc:include type="modules" name="above1" style="html5" />
-              		</div>
-            <?php } ?>
-          	<?php if ($above2 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="above2" class="<?php echo htmlspecialchars($above2Cols); ?>col<?php if (($above3+$above4) == 0) {echo " last";} ?>" style="border : 1px solid black; <?php if(($above3+$above4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="above2" class="<?php echo htmlspecialchars($above2Cols); ?>col<?php if (($above3+$above4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-                      	<jdoc:include type="modules" name="above2" style="html5" />
-              		</div>
-            <?php } ?>
-            <?php if ($above3 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="above3" class="<?php echo htmlspecialchars($above3Cols); ?>col<?php if ($above4 == 0) {echo " last";} ?>" style="border : 1px solid black; <?php if($above4 != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="above3" class="<?php echo htmlspecialchars($above3Cols); ?>col<?php if ($above4 == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-                      	<jdoc:include type="modules" name="above3" style="html5" />
-              		</div>
-            <?php } ?>
-            <?php if ($above4 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="above4" class="<?php echo htmlspecialchars($above4Cols); ?>col last" style="border : 1px solid black;"> 
-                <?php } else { ?>
-            		<div id="above4" class="<?php echo htmlspecialchars($above4Cols); ?>col last"> 
-                <?php } ?>                
-                      	<jdoc:include type="modules" name="above4" style="html5" />
-              		</div>
-             <?php } ?>
-          </div>	
-      </div>
-</div>
-<?php } ?>
-<div id="mainRow">
-      <div class="container">
-          <div class="row clearfix">                                
-            <?php if ($left > 0) : ?>
-              	<?php if($debug) { ?>
-              		<aside id="left" class="<?php echo htmlspecialchars($leftCols); ?>col clearfix"  style="border : 1px solid black; margin-right: 3.5%;" role="complementary">
-                <?php } else { ?>
-              		<aside id="left" class="<?php echo htmlspecialchars($leftCols); ?>col clearfix" role="complementary">
-                <?php } ?>                
-                   		<jdoc:include type="modules" name="left" style="html5" />
-              		</aside>
-            <?php endif; ?>
-           	<?php if($debug) { ?>
-           		<div id="main" role="main" class="<?php echo htmlspecialchars($mainCols); ?>col <?php if ($right == 0) echo "last" ; ?> clearfix"  style="border : 1px solid black; <?php if ($right == 1) echo "margin-right : 3.5%;";?>">
-            <?php } else { ?>
-           		<div id="main" role="main" class="<?php echo htmlspecialchars($mainCols); ?>col <?php if ($right == 0) echo "last" ; ?> clearfix">
-            <?php } ?>                
-                  	<jdoc:include type="message" />
-           			<jdoc:include type="component" />
-           		</div>
-            <?php if ($right > 0) : ?>
-              	<?php if($debug) { ?>
-              		<aside id="right" class="<?php echo htmlspecialchars($rightCols); ?>col last clearfix"  style="border : 1px solid black;" role="complementary">
-                <?php } else { ?>
-              		<aside id="right" class="<?php echo htmlspecialchars($rightCols); ?>col last clearfix" role="complementary">
-                <?php } ?>                
-                    	<jdoc:include type="modules" name="right" style="html5" />
-              		</aside>
-            <?php endif; ?>
-          </div>	
-      </div>                			
-</div>
-<?php if ($belowModules > 0) { ?>
-<div id="belowRow">
-	<div class="container">
-       	<div class="row clearfix">
-			<?php if ($below1 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="below1" class="<?php echo htmlspecialchars($below1Cols); ?>col<?php if (($below2+$below3+$below4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($below2+$below3+$below4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="below1" class="<?php echo htmlspecialchars($below1Cols); ?>col<?php if (($below2+$below3+$below4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="below1" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($below2 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="below2" class="<?php echo htmlspecialchars($below2Cols); ?>col<?php if (($below3+$below4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($below3+$below4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="below2" class="<?php echo htmlspecialchars($below2Cols); ?>col<?php if (($below3+$below4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="below2" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($below3 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="below3" class="<?php echo htmlspecialchars($below3Cols); ?>col<?php if ($below4 == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if($below4 != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="below3" class="<?php echo htmlspecialchars($below3Cols); ?>col<?php if ($below4 == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="below3" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($below4 > 0) { ?>
-              	<?php if($debug) { ?>
-					<div id="below4" class="<?php echo htmlspecialchars($below4Cols); ?>col last" style="border : 1px solid black;">
-                <?php } else { ?>
-					<div id="below4" class="<?php echo htmlspecialchars($below4Cols); ?>col last">
-                <?php } ?>                
-						<jdoc:include type="modules" name="below4" style="html5" />
-					</div>
-			<?php } ?>
-		</div>	
-	</div>
-</div>
-<?php } ?>
-<?php if ($bottomModules > 0) { ?>
-<div id="bottomRow">
-	<div class="container">
-       	<div class="row clearfix">
-			<?php if ($bottom1 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="bottom1" class="<?php echo htmlspecialchars($bottom1Cols); ?>col<?php if (($bottom2+$bottom3+$bottom4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($bottom2+$bottom3+$bottom4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="bottom1" class="<?php echo htmlspecialchars($bottom1Cols); ?>col<?php if (($bottom2+$bottom3+$bottom4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="bottom1" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($bottom2 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="bottom2" class="<?php echo htmlspecialchars($bottom2Cols); ?>col<?php if (($bottom3+$bottom4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($bottom3+$bottom4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="bottom2" class="<?php echo htmlspecialchars($bottom2Cols); ?>col<?php if (($bottom3+$bottom4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="bottom2" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($bottom3 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="bottom3" class="<?php echo htmlspecialchars($bottom3Cols); ?>col<?php if ($bottom4 == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if($bottom4 != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="bottom3" class="<?php echo htmlspecialchars($bottom3Cols); ?>col<?php if ($bottom4 == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="bottom3" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($bottom4 > 0) { ?>
-              	<?php if($debug) { ?>
-					<div id="bottom4" class="<?php echo htmlspecialchars($bottom4Cols); ?>col last" style="border : 1px solid black;">
-                <?php } else { ?>
-					<div id="bottom4" class="<?php echo htmlspecialchars($bottom4Cols); ?>col last">
-                <?php } ?>                
-						<jdoc:include type="modules" name="bottom4" style="html5" />
-					</div>
-			<?php } ?>
-		</div>	
-	</div>
-</div>
-<?php } ?>
-<?php if ($mobileMenu > 0) { ?>
-<div id="footerNav" class="mobile">
-	<div class="container">
-       	<div class="row clearfix">  				                
-           	<?php if($debug) { ?>
-				<nav id="footerMenu" role="navigation" class="clearfix"  style="border : 1px solid black;">
-            <?php } else { ?>
-				<nav id="footerMenu" role="navigation" class="clearfix" >
-            <?php } ?>                
-					<jdoc:include type="modules" name="mobile-menu" style="html5" />
+<!-- Now do the layout - copied from bootstrap
+
+<!-- Position nav-top -->
+<?php if ($navTop > 0) { ?>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+	        	<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="<?php echo $this->baseurl ?>/"><?php echo htmlspecialchars($app->getCfg('sitename'));?></a>
+				<nav id="nav-top" role="navigation" class="nav-collapse collapse">
+					<jdoc:include type="modules" name="nav-top" style="html5" />
 				</nav>
+			</div>
 		</div>
 	</div>
-</div>
 <?php } ?>
-<?php if ($footerModules > 0) { ?>
-<footer role="contentinfo">	
-   	<div class="container">
-       	<div class="row clearfix">
-			<?php if ($footer1 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="footer1" class="<?php echo htmlspecialchars($footer1Cols); ?>col<?php if (($footer2+$footer3+$footer4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($footer2+$footer3+$footer4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="footer1" class="<?php echo htmlspecialchars($footer1Cols); ?>col<?php if (($footer2+$footer3+$footer4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="footer1" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($footer2 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="footer2" class="<?php echo htmlspecialchars($footer2Cols); ?>col<?php if (($footer3+$footer4) == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if(($footer3+$footer4) != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="footer2" class="<?php echo htmlspecialchars($footer2Cols); ?>col<?php if (($footer3+$footer4) == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="footer2" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($footer3 > 0) { ?>
-              	<?php if($debug) { ?>
-            		<div id="footer3" class="<?php echo htmlspecialchars($footer3Cols); ?>col<?php if ($footer4 == 0) {echo " last";} ?>" style="border : 1px solid black;<?php if($footer4 != 0) {echo 'margin-right : 3.5%;';} ?>"> 
-                <?php } else { ?>
-            		<div id="footer3" class="<?php echo htmlspecialchars($footer3Cols); ?>col<?php if ($footer4 == 0) {echo " last";} ?>"> 
-                <?php } ?>                
-						<jdoc:include type="modules" name="footer3" style="html5" />
-					</div>
-			<?php } ?>
-			<?php if ($footer4 > 0) { ?>
-              	<?php if($debug) { ?>
-					<div id="footer4" class="<?php echo htmlspecialchars($footer4Cols); ?>col last" style="border : 1px solid black;">
-                <?php } else { ?>
-					<div id="footer4" class="<?php echo htmlspecialchars($footer4Cols); ?>col last">
-                <?php } ?>                
-						<jdoc:include type="modules" name="footer4" style="html5" />
-					</div>
-			<?php } ?>
-        </div>	
-	</div>				
-</footer>
+
+<!-- container for page contents -->
+<div class="container">
+
+<!-- Position nav-r1 -->
+<?php if ($navR1 > 0) { ?>
+	<nav id="nav-r1" role="navigation" class="subnav">
+		<jdoc:include type="modules" name="nav-r1" style="html5" />
+	</nav>
 <?php } ?>
-<footer role="contentinfo">	
-   	<div class="container">
-       	<div class="row clearfix">      
-			<div id="credit" class="last">&copy; <?php echo date("Y"); ?>
-				<a href="http://kisswebdesign.co.uk" title="KISS Web Design">KISS Web Design</a>
+
+<!-- Row 2 positions -->
+<?php if ($row2Active > 0) { ?>
+
+	<!-- Position section-r2-1 - use as logo or header -->
+	<?php if ($sectionR2a > 0) { ?>
+		<header id="section-r2-1">
+		    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
+				<jdoc:include type="modules" name="section-r2-1" style="html5" />
+		    </div>
+		</header>
+	<?php } ?>
+
+	<!-- Position section-r2-2 - use as tagline (related to logo/header) -->
+	<?php if ($sectionR2b > 0) { ?>
+		<aside id="section-r2-2">
+		    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
+				<jdoc:include type="modules" name="section-r2-2" style="html5" />
+		    </div>
+		</saide>
+	<?php } ?>
+
+	<!-- Position section-r2-3 - use as search position -->
+	<?php if ($sectionR2c > 0) { ?>
+		<section id="section-r2-2">
+		    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
+				<jdoc:include type="modules" name="section-r2-3" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r2-4 - no specified role -->
+	<?php if ($sectionR2d > 0) { ?>
+		<section id="section-r2-4">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
+				<jdoc:include type="modules" name="section-r2-4" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+<?php } ?>
+
+<!-- Position nav-r3 -->
+<?php if ($navR3 > 0) { ?>
+	<nav id="nav-r3" role="navigation" class="subnav">
+		<jdoc:include type="modules" name="nav-r3" style="html5" />
+	</nav>
+<?php } ?>
+
+<!-- Position section-r4 -->
+<?php if ($sectionR4 > 0) { ?>
+	<section id="section-r4">
+	    <div class="span<?php echo htmlspecialchars($sectionColsR4); ?>">
+			<jdoc:include type="modules" name="section-r4" style="html5" />
+	    </div>
+	</section>
+<?php } ?>
+
+<!-- Position nav-r5 -->
+<?php if ($navR5 > 0) { ?>
+	<nav id="nav-r5" role="navigation" class="subnav">
+		<jdoc:include type="modules" name="nav-r5" style="html5" />
+	</nav>
+<?php } ?>
+
+<!-- Row 6 positions -->
+<?php if ($row6Active > 0) { ?>
+
+	<!-- Position section-r6-1 -->
+	<?php if ($sectionR6a > 0) { ?>
+		<section id="section-r6-1">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR6a); ?>">
+				<jdoc:include type="modules" name="section-r6-1" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r6-2 -->
+	<?php if ($sectionR6b > 0) { ?>
+		<section id="section-r6-2">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR6b); ?>">
+				<jdoc:include type="modules" name="section-r6-2" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r6-3 -->
+	<?php if ($sectionR6c > 0) { ?>
+		<section id="section-r6-3">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR6c); ?>">
+				<jdoc:include type="modules" name="section-r6-3" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r6-4 -->
+	<?php if ($sectionR6d > 0) { ?>
+		<section id="section-r6-4">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR6d); ?>">
+				<jdoc:include type="modules" name="section-r6-4" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+<?php } ?>
+
+<!-- Row 7 positions -->
+<?php if ($row7Active > 0) { ?>
+
+	<!-- Position section-r7-1 -->
+	<?php if ($sectionR7a > 0) { ?>
+		<section id="section-r7-1">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR7a); ?>">
+				<jdoc:include type="modules" name="section-r7-1" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r7-2 -->
+	<?php if ($sectionR7b > 0) { ?>
+		<section id="section-r7-2">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR7b); ?>">
+				<jdoc:include type="modules" name="section-r7-2" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r7-3 -->
+	<?php if ($sectionR7c > 0) { ?>
+		<section id="section-r7-3">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR7c); ?>">
+				<jdoc:include type="modules" name="section-r7-3" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r7-4 -->
+	<?php if ($sectionR7d > 0) { ?>
+		<section id="section-r7-4">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR7d); ?>">
+				<jdoc:include type="modules" name="section-r7-4" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+<?php } ?>
+
+<!-- Position nav-r8 -->
+<?php if ($navR8 > 0) { ?>
+	<nav id="nav-r8" role="navigation" class="subnav">
+		<jdoc:include type="modules" name="nav-r8" style="html5" />
+	</nav>
+<?php } ?>
+
+<!-- Main content from Joomla -->
+<section id="mainRow">                               
+	<!-- Position section-main-left -->
+	<?php if ($sectionMainLeft > 0) { ?>
+		<aside id="section-main-left" class="span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
+			<jdoc:include type="modules" name="section-main-left" style="html5" />
+		</aside>
+	<?php } ?>
+
+	<!-- Position section-main -->
+	<div id="section-main" role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?>">
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
+	</div>
+
+	<!-- Position section-main-right -->
+	<?php if ($sectionMainRight > 0) { ?>
+		<aside id="section-main-right" class="span<?php echo htmlspecialchars($mainRightCols); ?>" role="complementary">
+			<jdoc:include type="modules" name="section-main-right" style="html5" />
+		</aside>
+	<?php } ?>
+</section>
+
+
+<!-- Row 10 positions -->
+<?php if ($row10Active > 0) { ?>
+
+	<!-- Position section-r10-1 -->
+	<?php if ($sectionR10a > 0) { ?>
+		<section id="section-r10-1">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR10a); ?>">
+				<jdoc:include type="modules" name="section-r10-1" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r10-2 -->
+	<?php if ($sectionR10b > 0) { ?>
+		<section id="section-r10-2">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR10b); ?>">
+				<jdoc:include type="modules" name="section-r10-2" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r10-3 -->
+	<?php if ($sectionR10c > 0) { ?>
+		<section id="section-r10-3">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR10c); ?>">
+				<jdoc:include type="modules" name="section-r10-3" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r10-4 -->
+	<?php if ($sectionR10d > 0) { ?>
+		<section id="section-r10-4">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR10d); ?>">
+				<jdoc:include type="modules" name="section-r10-4" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+<?php } ?>
+
+<!-- Row 11 positions -->
+<?php if ($row11Active > 0) { ?>
+
+	<!-- Position section-r11-1 -->
+	<?php if ($sectionR11a > 0) { ?>
+		<section id="section-r11-1">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR11a); ?>">
+				<jdoc:include type="modules" name="section-r11-1" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r11-2 -->
+	<?php if ($sectionR11b > 0) { ?>
+		<section id="section-r11-2">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR11b); ?>">
+				<jdoc:include type="modules" name="section-r11-2" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r11-3 -->
+	<?php if ($sectionR11c > 0) { ?>
+		<section id="section-r11-3">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR11c); ?>">
+				<jdoc:include type="modules" name="section-r11-3" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+	<!-- Position section-r11-4 -->
+	<?php if ($sectionR11d > 0) { ?>
+		<section id="section-r11-4">
+		    <div class="span<?php echo htmlspecialchars($sectionColsR11d); ?>">
+				<jdoc:include type="modules" name="section-r11-4" style="html5" />
+		    </div>
+		</section>
+	<?php } ?>
+
+<?php } ?>
+
+<!-- Position section-r12 -->
+<?php if ($sectionR12 > 0) { ?>
+	<section id="section-r12">
+	    <div class="span<?php echo htmlspecialchars($sectionColsR12); ?>">
+			<jdoc:include type="modules" name="section-r12" style="html5" />
+	    </div>
+	</section>
+<?php } ?>
+
+
+<!-- Row 13 positions -->
+<?php if ($row13Active > 0) { ?>
+	<footer role="contentinfo" class="footer">
+		<!-- Position section-r13-1 -->
+		<?php if ($sectionR13a > 0) { ?>
+			<section id="section-r13-1">
+			    <div class="span<?php echo htmlspecialchars($sectionColsR13a); ?>">
+					<jdoc:include type="modules" name="section-r13-1" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+
+		<!-- Position section-r13-2 -->
+		<?php if ($sectionR13b > 0) { ?>
+			<section id="section-r13-2">
+			    <div class="span<?php echo htmlspecialchars($sectionColsR13b); ?>">
+					<jdoc:include type="modules" name="section-r13-2" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+	
+		<!-- Position section-r13-3 -->
+		<?php if ($sectionR13c > 0) { ?>
+			<section id="section-r13-3">
+			    <div class="span<?php echo htmlspecialchars($sectionColsR13c); ?>">
+					<jdoc:include type="modules" name="section-r13-3" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+	
+		<!-- Position section-r13-4 -->
+		<?php if ($sectionR13d > 0) { ?>
+			<section id="section-r13-4">
+			    <div class="span<?php echo htmlspecialchars($sectionColsR13d); ?>">
+					<jdoc:include type="modules" name="section-r13-4" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+	</footer>
+<?php } ?>
+
+
+<!-- Position nav-r14 -->
+<?php if ($navR14 > 0) { ?>
+	<nav id="nav-r14" role="navigation" class="subnav">
+		<jdoc:include type="modules" name="nav-r14" style="html5" />
+	</nav>
+<?php } ?>
+
+
+<!-- Position nav-bottom -->
+<?php if ($navBottom > 0) { ?>
+	<div class="navbar navbar-fixed-bottom">
+		<div class="navbar-inner">
+			<div class="container">
+	        	<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="credit" class="brand" href="http://kisswebdesign.co.uk" title="KISS Web Design">KISS Web Design</a>
+				<nav id="nav-bottom" role="navigation" class="nav-collapse collapse">
+					<jdoc:include type="modules" name="nav-bottom" style="html5" />
+				</nav>
 			</div>
-        </div>
-	</div>				
-</footer>
+		</div>
+	</div>
+<?php } 
+else { ?>
+	<footer id="credit" class="footer">
+		<p class="pull-right">
+			<a href="http://kisswebdesign.co.uk" title="KISS Web Design">KISS Web Design</a>
+		</p>
+	</footer>
+<?php } ?>
 
 <jdoc:include type="modules" name="debug"/>
+
+</div> <!-- container -->
 
 <!-- Scripts -->
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>
@@ -439,14 +475,6 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/imgSizer.js"></script>
 	<![endif]-->
-
-<?php if ($analytics != "UA-XXXXX-X") : ?>
-<!-- http://mths.be/aab -->
-<script>
-var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-<?php endif; ?>
 
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 </body>

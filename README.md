@@ -40,8 +40,8 @@ User Information
  * If you have trouble getting this starter template installed, then this project is not for you. It assumes an intermediate level of knowledge of Joomla!, the Joomla! templating system, HTML5, CSS3, PHP and Javascript.
  * If you have a project in mind that you see being built using this starter template, but do not have the required skills/knowledge to make it happen - please feel free to contact me for a quote.
   
-PLANNED FEATURES
-================
+FEATURES  
+========  
   
  * Fully responsive scalable web design
  * Cross-platform smartphone support
@@ -50,68 +50,74 @@ PLANNED FEATURES
  * Includes respond.js https://github.com/scottjehl/Respond
  * Includes Selectivizr http://selectivizr.com/
  * 3 selectable fonts from google web fonts http://www.google.com/webfonts
- * 3 selectable icon fonts - general purpose, social networking light, social networking dark
  * Default font-size is 62.5%  - makes it the equivalent of 10px, therefore using font sizes in rem units gives an easy conversion to px sizes, ie 1.0rem = 10px, 1.4rem = 14px, etc.
- * Logo upload and select
  * Selectable module widths, or auto-set based on the active modules
  * Media queries for device screen sizes - 480, 980, 1200
  * Media query for high density mobile displays (eg iPhone 4) - min-device-pixel-ratio: 1.5
- * Small screensize optimization of the top menu (inserts a button to toggle the viewable menu on/off)
+ * Small screensize optimization of the top menu
  * The following module positions are available:
-	+ Top row
-		- Navigation row, fixed to the top of the screen
-	+ Row 1
-		- Menu
+	+ Top row : NAVIGATION
+		- nav-top : fixed to the top of the screen
+	+ Row 1 : NAVIGATION
+		- nav-r1
 	+ Row 2
-		- SECTION-R2-LEFT
-		- SECTION-R2-CENTER
-		- SECTION-R2-RIGHT
+		- section-r2-1 : default for the logo
+		- section-r2-2 : default for the tagline
+		- section-r2-3 : default for search
+		- section-r2-4
 	+ Row 3
-		- Breadcrumbs
+		- nav-r3
 	+ Row 4
-		- SECTION-R4
+		- section-r4
 	+ Row 5
-		- Menu
+		- nav-r5
 	+ Row 6
-		- SECTION-R6-LEFT
-		- SECTION-R6-CENTER
-		- SECTION-R6-RIGHT
+		- section-r6-1
+		- section-r6-2
+		- section-r6-3 
+		- section-r6-4
 	+ Row 7
-		- SECTION-R7-LEFT
-		- SECTION-R7-CENTER
-		- SECTION-R7-RIGHT
+		- section-r7-1
+		- section-r7-2
+		- section-r7-3
+		- section-r7-4
 	+ Row 8
-		- Menu
-	+ Row 9
-		- Left
-		- MAIN CONTENT
-		- Right
+		- nav-r8
+	+ Row 9 : MAIN CONTENT
+		- section-main-left : aside
+		- section-main
+		- section-main-right : aside
 	+ Row 10
-		- Menu
+		- section-r10-1
+		- section-r10-2
+		- section-r10-3 
+		- section-r10-4
 	+ Row 11
-		- SECTION-R11-LEFT
-		- SECTION-R11-CENTER
-		- SECTION-R11-RIGHT
+		- section-r11-1
+		- section-r11-2
+		- section-r11-3 
+		- section-r11-4
 	+ Row 12
-		- SECTION-R12-LEFT
-		- SECTION-R12-CENTER
-		- SECTION-R12-RIGHT
+		- section-r12
 	+ Row 13
-		- Menu
-	+ Row 14
-		- SECTION-R14
-	+ Row 15
-		- Menu
-	+ Row 16
-		- SECTION-R16-LEFT
-		- SECTION-R16-CENTER
-		- SECTION-R16-RIGHT
-	+ Row 17
-		- Menu
-	+ Row 18
-		- Copyright
-		- Navigation row, fixed to the bottom of the screen
+		- section-r13-1
+		- section-r13-2
+		- section-r13-3 
+		- section-r13-4
+	+ Row 14 : NAVIGATION
+		- nav-r14
+	+ Bottom row : NAVIGATION
+		- nav-bottom : fixed to the bottom of the screen
   
+  
+PLANNED FEATURES
+================
+  
+ * 3 selectable icon fonts - general purpose, social networking light, social networking dark
+ * Logo upload and select
+ * Google Analytics and MixPanel built-in
+ * Accessibility features
+    
 Contributing
 ============
   

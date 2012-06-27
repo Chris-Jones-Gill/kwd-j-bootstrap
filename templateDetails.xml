@@ -20,11 +20,8 @@
 	</description>
 		
 	<files>
-        <filename>favicon.ico</filename>
         <filename>index.php</filename>
-        <filename>template_preview.png</filename>
-        <filename>template_thumbnail.png</filename>
-        <filename>CreativeCommons-by-sa-3.0.txt</filename>
+       <filename>CreativeCommons-by-sa-3.0.txt</filename>
         <filename>gpl-2.0.txt</filename>
         <filename>mit-licence.txt</filename>
         <filename>templateDetails.xml</filename>
@@ -39,6 +36,7 @@
 		<position>section-r2-1</position>
 		<position>section-r2-2</position>
 		<position>section-r2-3</position>
+		<position>section-r2-4</position>
 		<position>nav-r3</position>
 		<position>section-r4</position>
 		<position>nav-r5</position>
@@ -130,49 +128,63 @@
 			
 			<fieldset name="Logo Upload and Logo Row Module Widths" label="Logo Upload and Logo Row Module Widths">
 				<field name="SiteLogo" type="media" hide_default="1" default="templates/kwd-j-bootstrap/assets/img/logo/kwd-j-bootstrap.png" label="Logo" description="Select or upload a logo. Default position is section-r2-1"/>
-                <field name="logo" type="list" default="four" label="logo width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="logo" type="list" default="3" label="logo width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
 							
-			<field name="tagline" type="list" default="four" label="tagline width" description="Default position is section-r2-2">
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+			<field name="tagline" type="list" default="3" label="tagline width" description="Default position is section-r2-2">
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
 				
-			<field name="search" type="list" default="four" label="search width" description="Default position is section-r2-3">
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="search" type="list" default="3" label="search width" description="Default position is section-r2-3">
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
+				</field>
+                <field name="section-r2-4" type="list" default="3" label="Section Row 2 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
 			</fieldset>	
 
@@ -184,8 +196,8 @@
 			</fieldset>
 
 			<fieldset name="Position Spans Row 4" label="Span for Positions on Row 4">
-                <field name="section-r4" type="list" default="twelve" label="Section Row 4 position width" >
-					<option value="twelve">twelve</option>
+                <field name="section-r4" type="list" default="12" label="Section Row 4 position width" >
+					<option value="12">twelve</option>
 				</field>
 			</fieldset>
 
@@ -201,61 +213,61 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-r6-1" type="list" default="three" label="Section Row 6 position 1 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="section-r6-1" type="list" default="3" label="Section Row 6 position 1 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r6-2" type="list" default="three" label="Section Row 6 position 2 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r6-2" type="list" default="3" label="Section Row 6 position 2 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r6-3" type="list" default="three" label="Section Row 6 position 3 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r6-3" type="list" default="3" label="Section Row 6 position 3 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r6-4" type="list" default="three" label="Section Row 6 position 4 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r6-4" type="list" default="3" label="Section Row 6 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
             </fieldset>	
 
@@ -264,61 +276,61 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-r7-1" type="list" default="three" label="Section Row 7 position 1 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="section-r7-1" type="list" default="3" label="Section Row 7 position 1 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r7-2" type="list" default="three" label="Section Row 7 position 2 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r7-2" type="list" default="3" label="Section Row 7 position 2 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r7-3" type="list" default="three" label="Section Row 7 position 3 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r7-3" type="list" default="3" label="Section Row 7 position 3 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r7-4" type="list" default="three" label="Section Row 7 position 4 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r7-4" type="list" default="3" label="Section Row 7 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
             </fieldset>	
 
@@ -334,47 +346,47 @@
                 			<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="mainleft" type="list" default="three" label="left width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="mainleft" type="list" default="3" label="left width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="maincontent" type="list" default="six" label="main content width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="maincontent" type="list" default="6" label="main content width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="mainright" type="list" default="three" label="right width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="mainright" type="list" default="3" label="right width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
 			</fieldset>	
 
@@ -383,61 +395,61 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-r10-1" type="list" default="three" label="Section Row 10 position 1 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="section-r10-1" type="list" default="3" label="Section Row 10 position 1 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r10-2" type="list" default="three" label="Section Row 10 position 2 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r10-2" type="list" default="3" label="Section Row 10 position 2 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r10-3" type="list" default="three" label="Section Row 10 position 3 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r10-3" type="list" default="3" label="Section Row 10 position 3 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r10-4" type="list" default="three" label="Section Row 10 position 4 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r10-4" type="list" default="3" label="Section Row 10 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
             </fieldset>	
 
@@ -446,67 +458,67 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-11-1" type="list" default="three" label="Section Row 11 position 1 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="section-11-1" type="list" default="3" label="Section Row 11 position 1 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r11-2" type="list" default="three" label="Section Row 11 position 2 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r11-2" type="list" default="3" label="Section Row 11 position 2 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r11-3" type="list" default="three" label="Section Row 11 position 3 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r11-3" type="list" default="3" label="Section Row 11 position 3 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r11-4" type="list" default="three" label="Section Row 11 position 4 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r11-4" type="list" default="3" label="Section Row 11 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
             </fieldset>	
 
 			<fieldset name="Position Spans Row 12" label="Span for Positions on Row 12">
-                <field name="section-r12" type="list" default="twelve" label="Section Row 12 position 1 width" >
-					<option value="twelve">twelve</option>
+                <field name="section-r12" type="list" default="12" label="Section Row 12 position 1 width" >
+					<option value="12">twelve</option>
 				</field>
 			</fieldset>
 
@@ -515,61 +527,61 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-13-1" type="list" default="three" label="Section Row 13 position 1 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+                <field name="section-13-1" type="list" default="3" label="Section Row 13 position 1 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r13-2" type="list" default="three" label="Section Row 13 position 2 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r13-2" type="list" default="3" label="Section Row 13 position 2 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r13-3" type="list" default="three" label="Section Row 13 position 3 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r13-3" type="list" default="3" label="Section Row 13 position 3 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
-				<field name="section-r13-4" type="list" default="three" label="Section Row 13 position 4 width" >
-					<option value="one">one</option>
-					<option value="two">two</option>
-					<option value="three">three</option>
-					<option value="four">four</option>
-					<option value="five">five</option>
-					<option value="six">six</option>
-					<option value="seven">seven</option>
-					<option value="eight">eight</option>
-					<option value="nine">nine</option>
-					<option value="ten">ten</option>
-					<option value="eleven">eleven</option>
-					<option value="twelve">twelve</option>
+				<field name="section-r13-4" type="list" default="3" label="Section Row 13 position 4 width" >
+					<option value="1">one</option>
+					<option value="2">two</option>
+					<option value="3">three</option>
+					<option value="4">four</option>
+					<option value="5">five</option>
+					<option value="6">six</option>
+					<option value="7">seven</option>
+					<option value="8">eight</option>
+					<option value="9">nine</option>
+					<option value="10">ten</option>
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
 				</field>
             </fieldset>	
 

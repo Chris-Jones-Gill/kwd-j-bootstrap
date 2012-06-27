@@ -37,10 +37,22 @@ body {
 }
 
 
+span.separator {
+    background-color: #222222;
+    border-right: 1px solid #333333;
+    height: 4rem;
+    margin: 0 9px;
+    overflow: hidden;
+    width: 1px;
+    display: block;
+    float: left;
+}
+
 /* Space out sub-sections more
 -------------------------------------------------- */
 section {
-  padding-top: 60px;
+/* removed for kwd-j-bootstrap */
+/*  padding-top: 60px; */
 }
 
 /* Faded out hr */

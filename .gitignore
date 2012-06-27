@@ -13,7 +13,6 @@
 *.swp
 Thumbs.db
 *.vi
-*.zip
 *~
 ._*
 # KWD project specific ignores
