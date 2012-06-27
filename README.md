@@ -10,6 +10,7 @@ It is based on [twitter/bootstrap](https://github.com/twitter/bootstrap) version
 Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own [baseline bootstrap](https://github.com/KISS-Web-Design/bootstrap).  
   
 This template is taken from our baseline, not the original twitter/bootstrap
+  
 ------------    
   
 Contact info  
@@ -23,6 +24,7 @@ Contact info
 	+ [@KissWebDesign](https://twitter.com/KissWebDesign "Twitter link for KISS Web Design")  
  * Via Facebook:	
 	+ [http://www.facebook.com/pages/Kiss-Web-Design-Ltd](http://www.facebook.com/pages/Kiss-Web-Design-Ltd/185807241443994 "Link to the KISS Web Design Facebook Page")  
+  
 ------------ 
     
 Quick start  
@@ -32,6 +34,7 @@ Quick start
 	+ git clone git://github.com/KISS-Web-Design/kwd-j-bootstrap.git
  * Or download it
 	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master](https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master "Download link for the project on Github")
+  
 ------------  
     
 User Information
@@ -42,6 +45,7 @@ User Information
  * You can install this starter template using the Joomla!2.5 Extension Manager, using the zip file included with this project.
  * If you have trouble getting this starter template installed, then this project is not for you. It assumes an intermediate level of knowledge of Joomla!, the Joomla! templating system, HTML5, CSS3, PHP and Javascript.
  * If you have a project in mind that you see being built using this starter template, but do not have the required skills/knowledge to make it happen - please feel free to contact me for a quote.
+  
 ------------  
     
 FEATURES  
@@ -122,6 +126,7 @@ PLANNED FEATURES
  * Logo upload and select
  * Google Analytics and MixPanel built-in
  * Accessibility features
+  
 ------------  
       
 Contributing
@@ -129,7 +134,8 @@ Contributing
   
  * If you want to contribute please feel free to do so. There are many ways to help:
  	+ Raise an issue on github [https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues](https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues "Link to the issues page of the project on Github")
- 	+ Sending pull requests for bug fixes or new features and improvements.    
+ 	+ Sending pull requests for bug fixes or new features and improvements.
+      
 ------------  
   
 Project Information
@@ -138,7 +144,8 @@ Project Information
  * Source: 
 	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap](https://github.com/KISS-Web-Design/kwd-j-bootstrap "Link to the project page on Github")
  * Live demo:
-	+ ...Coming Soon.
+	+ [http://kwd-j-bootstrap.stempsite.co.uk](http://kwd-j-bootstrap.stempsite.co.uk "Link to the demo site")
+  
 ------------  
     
 LICENCES
@@ -198,6 +205,7 @@ Some parts are public domain, and as such have no licence restrictions.
 	- documentation/examples/*.html
 	- assets/ico/favicon.ico
 	- templateDetails.xml
+  
 ------------  
   
 COPYRIGHTS
@@ -213,8 +221,8 @@ Files not part of twitter/bootstrap
 
 Copyright belongs to the original authors in all cases.
 
-Modifications to origial files
-==============================
+Modifications to original files
+===============================
   
 Where modifications have been made, those modifications are Copyright 2012 KISS Web Design, Ltd.
 
