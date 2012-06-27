@@ -10,7 +10,8 @@ It is based on [twitter/bootstrap](https://github.com/twitter/bootstrap) version
 Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own [baseline bootstrap](https://github.com/KISS-Web-Design/bootstrap).  
   
 This template is taken from our baseline, not the original twitter/bootstrap
-    
+------------    
+  
 Contact info  
 ============  
   
@@ -22,7 +23,8 @@ Contact info
 	+ [@KissWebDesign](https://twitter.com/KissWebDesign "Twitter link for KISS Web Design")  
  * Via Facebook:	
 	+ [http://www.facebook.com/pages/Kiss-Web-Design-Ltd](http://www.facebook.com/pages/Kiss-Web-Design-Ltd/185807241443994 "Link to the KISS Web Design Facebook Page")  
-  
+------------ 
+    
 Quick start  
 ===========  
   
@@ -30,7 +32,8 @@ Quick start
 	+ git clone git://github.com/KISS-Web-Design/kwd-j-bootstrap.git
  * Or download it
 	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master](https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master "Download link for the project on Github")
-  
+------------  
+    
 User Information
 ================
 
@@ -39,7 +42,8 @@ User Information
  * You can install this starter template using the Joomla!2.5 Extension Manager, using the zip file included with this project.
  * If you have trouble getting this starter template installed, then this project is not for you. It assumes an intermediate level of knowledge of Joomla!, the Joomla! templating system, HTML5, CSS3, PHP and Javascript.
  * If you have a project in mind that you see being built using this starter template, but do not have the required skills/knowledge to make it happen - please feel free to contact me for a quote.
-  
+------------  
+    
 FEATURES  
 ========  
   
@@ -56,16 +60,16 @@ FEATURES
  * Media query for high density mobile displays (eg iPhone 4) - min-device-pixel-ratio: 1.5
  * Small screensize optimization of the top menu
  * The following module positions are available:
-	+ Top row : NAVIGATION
+	+ Top row
 		- nav-top : fixed to the top of the screen
-	+ Row 1 : NAVIGATION
+	+ Row 1 
 		- nav-r1
 	+ Row 2
 		- section-r2-1 : default for the logo
 		- section-r2-2 : default for the tagline
 		- section-r2-3 : default for search
 		- section-r2-4
-	+ Row 3
+	+ Row 3 : 
 		- nav-r3
 	+ Row 4
 		- section-r4
@@ -85,7 +89,7 @@ FEATURES
 		- nav-r8
 	+ Row 9 : MAIN CONTENT
 		- section-main-left : aside
-		- section-main
+		- section-main : Joomla content area
 		- section-main-right : aside
 	+ Row 10
 		- section-r10-1
@@ -104,12 +108,13 @@ FEATURES
 		- section-r13-2
 		- section-r13-3 
 		- section-r13-4
-	+ Row 14 : NAVIGATION
+	+ Row 14 
 		- nav-r14
-	+ Bottom row : NAVIGATION
+	+ Bottom row
 		- nav-bottom : fixed to the bottom of the screen
   
-  
+------------  
+    
 PLANNED FEATURES
 ================
   
@@ -117,13 +122,15 @@ PLANNED FEATURES
  * Logo upload and select
  * Google Analytics and MixPanel built-in
  * Accessibility features
-    
+------------  
+      
 Contributing
 ============
   
  * If you want to contribute please feel free to do so. There are many ways to help:
  	+ Raise an issue on github [https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues](https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues "Link to the issues page of the project on Github")
  	+ Sending pull requests for bug fixes or new features and improvements.    
+------------  
   
 Project Information
 ===================
@@ -132,35 +139,83 @@ Project Information
 	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap](https://github.com/KISS-Web-Design/kwd-j-bootstrap "Link to the project page on Github")
  * Live demo:
 	+ ...Coming Soon.
+------------  
+    
+LICENCES
+========
   
-Copyright and License
-=====================
+Given the variety of sources there are many applicable licences for this Joomla! Template.  
+Some parts are availabele under dual licences.  
+Some parts are public domain, and as such have no licence restrictions.
+
+ * Apache License, Version 2.0
+    - [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0 "Link to the Apache Version 2.0 licence site")
+    - A copy of the full wording, in plain text, of this licence is included with this project in the filname LICENCE.
+    - assets/js/application.js
+    - assets/js/bootstrap.js
+    - assets/js/bootstrap.min.js
+    - assets/js/bootstrap-alert.js
+    - assets/js/bootstrap-button.js
+    - assets/js/bootstrap-carousel.js
+    - assets/js/bootstrap-collapse.js
+    - assets/js/bootstrap-dropdown.js
+    - assets/js/bootstrap-modal.js
+    - assets/js/bootstrap-popover.js
+    - assets/js/bootstrap-scrollspy.js
+    - assets/js/bootstrap-tab.js
+    - assets/js/bootstrap-tooltip.js
+    - assets/js/bootstrap-transition.js
+    - assets/js/bootstrap-typehead.js
+    - assests/js/google-code-prettify/* [all files]
+    - assets/css/bootstrap.ss
+    - assets/css/bootstrap-responsive.css
+    - assets/css/docs.css
+    - documentation/assets/* [all files]
+ * GNU/GPL v2 or later:
+	- [http://www.gnu.org/licenses/gpl-2.0.html](http://www.gnu.org/licenses/gpl-2.0.html "Lnk to the GNU/GPL v2 licence site")
+	- A copy of the full wording, in plain text, of this licence is included with this project in the filname gpl-2.0.txt
+	- functions/googlewebfont.php
+	- functions/logic.php
+	- html/* [all files]
+	- assets/js/libs/respond.min.js
+	- assets/js/mylibs/plugins.js
+	- index.php
+ * The MIT License (MIT):
+	- [http://opensource.org/licenses/mit-license.php](http://opensource.org/licenses/mit-license.php "Link to the MIT licence site")
+	- A copy of the full wording, in plain text, of this licence is included with this project in the filname mit-licence.txt
+	- assets/js/libs/modernizr.2.5.3.custom.js
+	- assets/js/libs/respond.min.js
+	- assets/js/libs/selectivizr.min.js
+	- assets/js/plugins.js
+ * The BSD Licence (BSD):
+	- [http://opensource.org/licenses/BSD-3-Clause](http://opensource.org/licenses/BSD-3-Clause "Link to the BSD licence site")
+	- A copy of the full wording, in plain text, of this licence is included with this project in the filname BSD-licence.txt
+	- assets/js/libs/modernizr.2.5.3.custom.js
+ * Creative Commons Attribution-ShareAlike 3.0 Unported:
+    - [http://creativecommons.org/licenses/by-sa/3.0/](http://creativecommons.org/licenses/by-sa/3.0/ "Link to the Creative Commons licence site")
+    - A copy of the full wording, in plain text, of this licence is included with this project in the filname CreativeCommons-by-sa-3.0.txt
+	- documentation/*.html
+	- documentation/examples/*.html
+	- assets/ico/favicon.ico
+	- templateDetails.xml
+------------  
+  
+COPYRIGHTS
+==========
   
 Original twitter/bootstrap
---------------------------
+==========================
 
-Copyright 2012 Twitter, Inc.  
-Licensed under the Apache License, Version 2.0 (see below).  
+Copyright 2012 Twitter, Inc.   
   
-Modifications and all other files
----------------------------------
-  
-Copyright 2012 KISS Web Design    
-Licensed under the Apache License, Version 2.0 (see below).  
+Files not part of twitter/bootstrap
+===================================
 
-The licence  
------------  
+Copyright belongs to the original authors in all cases.
+
+Modifications to origial files
+==============================
   
-A copy of the full wording, in plain text, of this licence is included with this project in the filname LICENCE.  
-  
-Licensed under the Apache License, Version 2.0 (the "License");  
-you may not use this work except in compliance with the License.  
-You may obtain a copy of the License in the LICENSE file, or at:  
-  
-   http://www.apache.org/licenses/LICENSE-2.0  
-  
-Unless required by applicable law or agreed to in writing, software  
-distributed under the License is distributed on an "AS IS" BASIS,  
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
-See the License for the specific language governing permissions and  
-limitations under the License.  
+Where modifications have been made, those modifications are Copyright 2012 KISS Web Design, Ltd.
+
+This only applies to the modifications, not to the rest of the content, where the copyright is retained by the original copyright holder.
