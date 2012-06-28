@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.3
+ * Version: 		0.0.4
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -439,9 +439,20 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php } 
 else { ?>
 	<footer id="credit" class="footer">
-		<p class="pull-right">
-			<a href="http://kisswebdesign.co.uk" title="KISS Web Design">KISS Web Design</a>
-		</p>
+		<div class="span12">
+			<div class="custom">
+				<hr>
+				<div class="row-fluid">
+					<div class="span6">
+					</div>
+					<div class="span6">	
+						<p class="pull-right">
+							This website is bought to you by <a href="http://kisswebdesign.co.uk" title="KISS Web Design">KISS Web Design</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 <?php } ?>
 
@@ -452,7 +463,7 @@ else { ?>
 <?php // Scripts ?>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>
     <?php // Le javascript
-    ================================================== ?>
+    // ================================================== ?>
     <?php // Placed at the end of the document so the pages load faster ?>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/jquery.js"></script>

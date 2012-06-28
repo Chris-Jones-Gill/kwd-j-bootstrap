@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.1
+ * Version: 		0.0.2
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -131,10 +131,10 @@ if ($this->params->get('CalculateR7')) {
 }
 else {
 	// Use the values specified in the template style
-	$sectionColsR7a = $this->params->get('section-R7-1');
-	$sectionColsR7b = $this->params->get('section-R7-2');
-	$sectionColsR7c = $this->params->get('section-R7-3');
-	$sectionColsR7d = $this->params->get('section-R7-4');
+	$sectionColsR7a = $this->params->get('section-r7-1');
+	$sectionColsR7b = $this->params->get('section-r7-2');
+	$sectionColsR7c = $this->params->get('section-r7-3');
+	$sectionColsR7d = $this->params->get('section-r7-4');
 }
 
 $activateNavR8 = $this->params->get('navr8');
@@ -164,17 +164,17 @@ if ($this->params->get('CalculateR10')) {
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
 	if(($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d) != 0) {$sectionR10cols = (12/($sectionR10a + $sectionR10b + $sectionR10c + $sectionR10d));} else {$sectionR10cols = 0;}
-	$sectionColsR10a = $this->params->set('section-R10-1', $sectionR10cols);
-	$sectionColsR10b = $this->params->set('section-R10-2', $sectionR10cols);
-	$sectionColsR10c = $this->params->set('section-R10-3', $sectionR10cols);
-	$sectionColsR10d = $this->params->set('section-R10-4', $sectionR10cols);
+	$sectionColsR10a = $this->params->set('section-r10-1', $sectionR10cols);
+	$sectionColsR10b = $this->params->set('section-r10-2', $sectionR10cols);
+	$sectionColsR10c = $this->params->set('section-r10-3', $sectionR10cols);
+	$sectionColsR10d = $this->params->set('section-r10-4', $sectionR10cols);
 }
 else {
 	// Use the values specified in the template style
-	$sectionColsR10a = $this->params->get('section-R10-1');
-	$sectionColsR10b = $this->params->get('section-R10-2');
-	$sectionColsR10c = $this->params->get('section-R10-3');
-	$sectionColsR10d = $this->params->get('section-R10-4');
+	$sectionColsR10a = $this->params->get('section-r10-1');
+	$sectionColsR10b = $this->params->get('section-r10-2');
+	$sectionColsR10c = $this->params->get('section-r10-3');
+	$sectionColsR10d = $this->params->get('section-r10-4');
 }
 	
 if ($this->params->get('CalculateR11')) {
@@ -182,17 +182,17 @@ if ($this->params->get('CalculateR11')) {
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
 	if(($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d) != 0) {$sectionR11cols = (12/($sectionR11a + $sectionR11b + $sectionR11c + $sectionR11d));} else {$sectionR11cols = 0;}
-	$sectionColsR11a = $this->params->set('section-R11-1', $sectionR11cols);
-	$sectionColsR11b = $this->params->set('section-R11-2', $sectionR11cols);
-	$sectionColsR11c = $this->params->set('section-R11-3', $sectionR11cols);
-	$sectionColsR11d = $this->params->set('section-R11-4', $sectionR11cols);
+	$sectionColsR11a = $this->params->set('section-r11-1', $sectionR11cols);
+	$sectionColsR11b = $this->params->set('section-r11-2', $sectionR11cols);
+	$sectionColsR11c = $this->params->set('section-r11-3', $sectionR11cols);
+	$sectionColsR11d = $this->params->set('section-r11-4', $sectionR11cols);
 }
 else {
 	// Use the values specified in the template style
-	$sectionColsR11a = $this->params->get('section-R11-1');
-	$sectionColsR11b = $this->params->get('section-R11-2');
-	$sectionColsR11c = $this->params->get('section-R11-3');
-	$sectionColsR11d = $this->params->get('section-R11-4');
+	$sectionColsR11a = $this->params->get('section-r11-1');
+	$sectionColsR11b = $this->params->get('section-r11-2');
+	$sectionColsR11c = $this->params->get('section-r11-3');
+	$sectionColsR11d = $this->params->get('section-r11-4');
 }
 
 $sectionColsR12 = $this->params->get('section-r12');
@@ -202,17 +202,17 @@ if ($this->params->get('CalculateR13')) {
 	// Ensures the modules always fill the available width
 	// Overrides the values specified in the template style
 	if(($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d) != 0) {$sectionR13cols = (12/($sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d));} else {$sectionR13cols = 0;}
-	$sectionColsR13a = $this->params->set('section-R13-1', $sectionR13cols);
-	$sectionColsR13b = $this->params->set('section-R13-2', $sectionR13cols);
-	$sectionColsR13c = $this->params->set('section-R13-3', $sectionR13cols);
-	$sectionColsR13d = $this->params->set('section-R13-4', $sectionR13cols);
+	$sectionColsR13a = $this->params->set('section-r13-1', $sectionR13cols);
+	$sectionColsR13b = $this->params->set('section-r13-2', $sectionR13cols);
+	$sectionColsR13c = $this->params->set('section-r13-3', $sectionR13cols);
+	$sectionColsR13d = $this->params->set('section-r13-4', $sectionR13cols);
 }
 else {
 	// Use the values specified in the template style
-	$sectionColsR13a = $this->params->get('section-R13-1');
-	$sectionColsR13b = $this->params->get('section-R13-2');
-	$sectionColsR13c = $this->params->get('section-R13-3');
-	$sectionColsR13d = $this->params->get('section-R13-4');
+	$sectionColsR13a = $this->params->get('section-r13-1');
+	$sectionColsR13b = $this->params->get('section-r13-2');
+	$sectionColsR13c = $this->params->get('section-r13-3');
+	$sectionColsR13d = $this->params->get('section-r13-4');
 }
 
 $activateNavR14 = $this->params->get('navr14');
