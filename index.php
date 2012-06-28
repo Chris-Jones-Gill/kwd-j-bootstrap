@@ -2,11 +2,11 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.1
+ * Version: 		0.3
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
- * License:	Apache Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
+ * License:			Apache Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
 /* ===================================================================== */
 
 // Load template logic
@@ -16,13 +16,13 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <head>
 <jdoc:include type="head" />
 
-<!-- Now do the IE specific stuff -->
+<?php // Now do the IE specific stuff ?>
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<?php // Le HTML5 shim, for IE6-8 support of HTML5 elements ?>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<!-- Media query, for IE6-8 support of min/max width media queries -->
+	<?php // Media query, for IE6-8 support of min/max width media queries ?>
 	<!--[if lt IE 9]>
 		<script>
   			document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/libs/respond.min.js"></s'+'cript>');
@@ -31,7 +31,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<!--[if (gte IE 6)&(lte IE 8)]>
 		<script type="text/javascript" src="/assets/js/libs/selectivizr-min.js"></script>
 	<![endif]-->
-	<!-- Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 -->
+	<?php // Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 ?>
 	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
 	<script>
 		addLoadEvent(function() {
@@ -57,7 +57,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 // End of the IE specific stuff
 ?>
 
-    <!-- Le fav and touch icons -->
+    <?php // Le fav and touch icons ?>
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
@@ -69,9 +69,9 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <body class="<?php echo htmlspecialchars($bodyFontFamily); ?>"data-spy="scroll" data-target=".subnav" data-offset="50">
 
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
-<!-- Now do the layout - copied from bootstrap
+<?php // Now do the layout - copied from bootstrap ?>
 
-<!-- Position nav-top -->
+<?php // Position nav-top ?>
 <?php if ($navTop > 0) { ?>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -90,65 +90,65 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	</div>
 <?php } ?>
 
-<!-- container for page contents -->
+<?php // container for page contents ?>
 <div class="container">
 
-<!-- Position nav-r1 -->
+<?php // Position nav-r1 ?>
 <?php if ($navR1 > 0) { ?>
 	<nav id="nav-r1" role="navigation" class="subnav">
 		<jdoc:include type="modules" name="nav-r1" style="html5" />
 	</nav>
 <?php } ?>
 
-<!-- Row 2 positions -->
+<?php // Row 2 positions ?>
 <?php if ($row2Active > 0) { ?>
-
-	<!-- Position section-r2-1 - use as logo or header -->
-	<?php if ($sectionR2a > 0) { ?>
-		<header id="section-r2-1">
-		    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
-				<jdoc:include type="modules" name="section-r2-1" style="html5" />
-		    </div>
-		</header>
-	<?php } ?>
-
-	<!-- Position section-r2-2 - use as tagline (related to logo/header) -->
-	<?php if ($sectionR2b > 0) { ?>
-		<aside id="section-r2-2">
-		    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
-				<jdoc:include type="modules" name="section-r2-2" style="html5" />
-		    </div>
-		</saide>
-	<?php } ?>
-
-	<!-- Position section-r2-3 - use as search position -->
-	<?php if ($sectionR2c > 0) { ?>
-		<section id="section-r2-2">
-		    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
-				<jdoc:include type="modules" name="section-r2-3" style="html5" />
-		    </div>
-		</section>
-	<?php } ?>
-
-	<!-- Position section-r2-4 - no specified role -->
-	<?php if ($sectionR2d > 0) { ?>
-		<section id="section-r2-4">
-		    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
-				<jdoc:include type="modules" name="section-r2-4" style="html5" />
-		    </div>
-		</section>
-	<?php } ?>
-
+	<header id="header-row" class="jumbotron masthead">
+		<?php // Position section-r2-1 - use as logo or header ?>
+		<?php if ($sectionR2a > 0) { ?>
+			<header id="section-r2-1">
+			    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
+					<jdoc:include type="modules" name="section-r2-1" style="html5" />
+			    </div>
+			</header>
+		<?php } ?>
+	
+		<?php // Position section-r2-2 - use as tagline (related to logo/header) ?>
+		<?php if ($sectionR2b > 0) { ?>
+			<aside id="section-r2-2">
+			    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
+					<jdoc:include type="modules" name="section-r2-2" style="html5" />
+			    </div>
+			</saide>
+		<?php } ?>
+	
+		<?php // Position section-r2-3 - use as search position ?>
+		<?php if ($sectionR2c > 0) { ?>
+			<section id="section-r2-2">
+			    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
+					<jdoc:include type="modules" name="section-r2-3" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+	
+		<?php // Position section-r2-4 - no specified role ?>
+		<?php if ($sectionR2d > 0) { ?>
+			<section id="section-r2-4">
+			    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
+					<jdoc:include type="modules" name="section-r2-4" style="html5" />
+			    </div>
+			</section>
+		<?php } ?>
+	</header>
 <?php } ?>
 
-<!-- Position nav-r3 -->
+<?php // Position nav-r3 ?>
 <?php if ($navR3 > 0) { ?>
 	<nav id="nav-r3" role="navigation" class="subnav">
 		<jdoc:include type="modules" name="nav-r3" style="html5" />
 	</nav>
 <?php } ?>
 
-<!-- Position section-r4 -->
+<?php // Position section-r4 ?>
 <?php if ($sectionR4 > 0) { ?>
 	<section id="section-r4">
 	    <div class="span<?php echo htmlspecialchars($sectionColsR4); ?>">
@@ -157,17 +157,17 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	</section>
 <?php } ?>
 
-<!-- Position nav-r5 -->
+<?php // Position nav-r5 ?>
 <?php if ($navR5 > 0) { ?>
 	<nav id="nav-r5" role="navigation" class="subnav">
 		<jdoc:include type="modules" name="nav-r5" style="html5" />
 	</nav>
 <?php } ?>
 
-<!-- Row 6 positions -->
+<?php // Row 6 positions ?>
 <?php if ($row6Active > 0) { ?>
 
-	<!-- Position section-r6-1 -->
+	<?php // Position section-r6-1 ?>
 	<?php if ($sectionR6a > 0) { ?>
 		<section id="section-r6-1">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR6a); ?>">
@@ -176,7 +176,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r6-2 -->
+	<?php // Position section-r6-2 ?>
 	<?php if ($sectionR6b > 0) { ?>
 		<section id="section-r6-2">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR6b); ?>">
@@ -185,7 +185,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r6-3 -->
+	<?php // Position section-r6-3 ?>
 	<?php if ($sectionR6c > 0) { ?>
 		<section id="section-r6-3">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR6c); ?>">
@@ -194,7 +194,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r6-4 -->
+	<?php // Position section-r6-4 ?>
 	<?php if ($sectionR6d > 0) { ?>
 		<section id="section-r6-4">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR6d); ?>">
@@ -205,10 +205,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php } ?>
 
-<!-- Row 7 positions -->
+<?php // Row 7 positions ?>
 <?php if ($row7Active > 0) { ?>
 
-	<!-- Position section-r7-1 -->
+	<?php // Position section-r7-1 ?>
 	<?php if ($sectionR7a > 0) { ?>
 		<section id="section-r7-1">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR7a); ?>">
@@ -217,7 +217,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r7-2 -->
+	<?php // Position section-r7-2 ?>
 	<?php if ($sectionR7b > 0) { ?>
 		<section id="section-r7-2">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR7b); ?>">
@@ -226,7 +226,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r7-3 -->
+	<?php // Position section-r7-3 ?>
 	<?php if ($sectionR7c > 0) { ?>
 		<section id="section-r7-3">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR7c); ?>">
@@ -235,7 +235,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r7-4 -->
+	<?php // Position section-r7-4 ?>
 	<?php if ($sectionR7d > 0) { ?>
 		<section id="section-r7-4">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR7d); ?>">
@@ -246,29 +246,29 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php } ?>
 
-<!-- Position nav-r8 -->
+<?php // Position nav-r8 ?>
 <?php if ($navR8 > 0) { ?>
 	<nav id="nav-r8" role="navigation" class="subnav">
 		<jdoc:include type="modules" name="nav-r8" style="html5" />
 	</nav>
 <?php } ?>
 
-<!-- Main content from Joomla -->
+<?php // Main content from Joomla ?>
 <section id="mainRow">                               
-	<!-- Position section-main-left -->
+	<?php // Position section-main-left ?>
 	<?php if ($sectionMainLeft > 0) { ?>
 		<aside id="section-main-left" class="span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
 			<jdoc:include type="modules" name="section-main-left" style="html5" />
 		</aside>
 	<?php } ?>
 
-	<!-- Position section-main -->
+	<?php // Position section-main ?>
 	<div id="section-main" role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?>">
 		<jdoc:include type="message" />
 		<jdoc:include type="component" />
 	</div>
 
-	<!-- Position section-main-right -->
+	<?php // Position section-main-right ?>
 	<?php if ($sectionMainRight > 0) { ?>
 		<aside id="section-main-right" class="span<?php echo htmlspecialchars($mainRightCols); ?>" role="complementary">
 			<jdoc:include type="modules" name="section-main-right" style="html5" />
@@ -277,10 +277,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 </section>
 
 
-<!-- Row 10 positions -->
+<?php // Row 10 positions ?>
 <?php if ($row10Active > 0) { ?>
 
-	<!-- Position section-r10-1 -->
+	<?php // Position section-r10-1 ?>
 	<?php if ($sectionR10a > 0) { ?>
 		<section id="section-r10-1">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR10a); ?>">
@@ -289,7 +289,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r10-2 -->
+	<?php // Position section-r10-2 ?>
 	<?php if ($sectionR10b > 0) { ?>
 		<section id="section-r10-2">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR10b); ?>">
@@ -298,7 +298,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r10-3 -->
+	<?php // Position section-r10-3 ?>
 	<?php if ($sectionR10c > 0) { ?>
 		<section id="section-r10-3">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR10c); ?>">
@@ -307,7 +307,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r10-4 -->
+	<?php // Position section-r10-4 ?>
 	<?php if ($sectionR10d > 0) { ?>
 		<section id="section-r10-4">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR10d); ?>">
@@ -318,10 +318,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php } ?>
 
-<!-- Row 11 positions -->
+<?php // Row 11 positions ?>
 <?php if ($row11Active > 0) { ?>
 
-	<!-- Position section-r11-1 -->
+	<?php // Position section-r11-1 ?>
 	<?php if ($sectionR11a > 0) { ?>
 		<section id="section-r11-1">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR11a); ?>">
@@ -330,7 +330,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r11-2 -->
+	<?php // Position section-r11-2 ?>
 	<?php if ($sectionR11b > 0) { ?>
 		<section id="section-r11-2">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR11b); ?>">
@@ -339,7 +339,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r11-3 -->
+	<?php // Position section-r11-3 ?>
 	<?php if ($sectionR11c > 0) { ?>
 		<section id="section-r11-3">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR11c); ?>">
@@ -348,7 +348,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</section>
 	<?php } ?>
 
-	<!-- Position section-r11-4 -->
+	<?php // Position section-r11-4 ?>
 	<?php if ($sectionR11d > 0) { ?>
 		<section id="section-r11-4">
 		    <div class="span<?php echo htmlspecialchars($sectionColsR11d); ?>">
@@ -359,7 +359,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php } ?>
 
-<!-- Position section-r12 -->
+<?php // Position section-r12 ?>
 <?php if ($sectionR12 > 0) { ?>
 	<section id="section-r12">
 	    <div class="span<?php echo htmlspecialchars($sectionColsR12); ?>">
@@ -369,10 +369,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php } ?>
 
 
-<!-- Row 13 positions -->
+<?php // Row 13 positions ?>
 <?php if ($row13Active > 0) { ?>
 	<footer role="contentinfo" class="footer">
-		<!-- Position section-r13-1 -->
+		<?php // Position section-r13-1 ?>
 		<?php if ($sectionR13a > 0) { ?>
 			<section id="section-r13-1">
 			    <div class="span<?php echo htmlspecialchars($sectionColsR13a); ?>">
@@ -381,7 +381,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			</section>
 		<?php } ?>
 
-		<!-- Position section-r13-2 -->
+		<?php // Position section-r13-2 ?>
 		<?php if ($sectionR13b > 0) { ?>
 			<section id="section-r13-2">
 			    <div class="span<?php echo htmlspecialchars($sectionColsR13b); ?>">
@@ -390,7 +390,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			</section>
 		<?php } ?>
 	
-		<!-- Position section-r13-3 -->
+		<?php // Position section-r13-3 ?>
 		<?php if ($sectionR13c > 0) { ?>
 			<section id="section-r13-3">
 			    <div class="span<?php echo htmlspecialchars($sectionColsR13c); ?>">
@@ -399,7 +399,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			</section>
 		<?php } ?>
 	
-		<!-- Position section-r13-4 -->
+		<?php // Position section-r13-4 ?>
 		<?php if ($sectionR13d > 0) { ?>
 			<section id="section-r13-4">
 			    <div class="span<?php echo htmlspecialchars($sectionColsR13d); ?>">
@@ -411,7 +411,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php } ?>
 
 
-<!-- Position nav-r14 -->
+<?php // Position nav-r14 ?>
 <?php if ($navR14 > 0) { ?>
 	<nav id="nav-r14" role="navigation" class="subnav">
 		<jdoc:include type="modules" name="nav-r14" style="html5" />
@@ -419,7 +419,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php } ?>
 
 
-<!-- Position nav-bottom -->
+<?php // Position nav-bottom ?>
 <?php if ($navBottom > 0) { ?>
 	<div class="navbar navbar-fixed-bottom">
 		<div class="navbar-inner">
@@ -447,13 +447,13 @@ else { ?>
 
 <jdoc:include type="modules" name="debug"/>
 
-</div> <!-- container -->
+</div> <?php // container ?>
 
-<!-- Scripts -->
+<?php // Scripts ?>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+    <?php // Le javascript
+    ================================================== ?>
+    <?php // Placed at the end of the document so the pages load faster ?>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/jquery.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/google-code-prettify/prettify.js"></script>
@@ -471,7 +471,7 @@ else { ?>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.js"></script>
 
-	<!-- Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 -->
+	<?php // Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 ?>
 	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/imgSizer.js"></script>
 	<![endif]-->
