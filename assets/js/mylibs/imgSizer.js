@@ -1,5 +1,5 @@
 /* =====================================================================
- * Template:	KWD_Joomla_OneWeb :: for Joomla! 2.5
+ * Template:	kwd-j-bootstrap :: for Joomla! 2.5
  * File:		imgSizer.js
  * Based on:	http://unstoppablerobotninja.com/entry/fluid-images/
  * 				This is in the public domain, and has no licence.

@@ -1,0 +1,7 @@
+.heading_hide:before {
+    content: 'Hide ';
+}
+
+.heading_show:before {
+    content: 'Show ';
+}

@@ -265,6 +265,14 @@ if ( !$loadMoo ) {
 	unset($head['scripts'][$this->baseurl . '/media/system/js/mootools-more.js']);
 	unset($head['scripts'][$this->baseurl . '/media/system/js/caption.js']);	// We may as well remove caption.js too - Seth Warburton @ http://internet-inspired.com	
 	$this->setHeadData($head);
+	//remove JCaption - additional method required after core changes in 2.5.1
+	// http://www.acuit.com.au/Blogs/removing-jcaption-in-joomla2.5.html
+	if (isset($this->_script['text/javascript']))
+	{
+	   $this->_script['text/javascript'] = preg_replace('%window\.addEvent\(\'load\',\s*function\(\)\s*{\s*new\s*JCaption\(\'img.caption\'\);\s*}\);\s*%', '', $this->_script['text/javascript']);
+	   if (empty($this->_script['text/javascript']))
+	      unset($this->_script['text/javascript']);
+	}
 }
 
 // Fix Google Web Font name for CSS

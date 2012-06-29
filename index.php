@@ -16,7 +16,9 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <head>
 <jdoc:include type="head" />
 
-<?php // Now do the IE specific stuff ?>
+<?php 
+// Now do the IE specific stuff 
+?>
 
 	<?php // Le HTML5 shim, for IE6-8 support of HTML5 elements ?>
 	<!--[if lt IE 9]>
@@ -102,43 +104,48 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php // Row 2 positions ?>
 <?php if ($row2Active > 0) { ?>
-	<header id="header-row" class="jumbotron masthead">
-		<?php // Position section-r2-1 - use as logo or header ?>
-		<?php if ($sectionR2a > 0) { ?>
-			<header id="section-r2-1">
-			    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
-					<jdoc:include type="modules" name="section-r2-1" style="html5" />
-			    </div>
-			</header>
-		<?php } ?>
-	
-		<?php // Position section-r2-2 - use as tagline (related to logo/header) ?>
-		<?php if ($sectionR2b > 0) { ?>
-			<aside id="section-r2-2">
-			    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
-					<jdoc:include type="modules" name="section-r2-2" style="html5" />
-			    </div>
-			</saide>
-		<?php } ?>
-	
-		<?php // Position section-r2-3 - use as search position ?>
-		<?php if ($sectionR2c > 0) { ?>
-			<section id="section-r2-2">
-			    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
-					<jdoc:include type="modules" name="section-r2-3" style="html5" />
-			    </div>
-			</section>
-		<?php } ?>
-	
-		<?php // Position section-r2-4 - no specified role ?>
-		<?php if ($sectionR2d > 0) { ?>
-			<section id="section-r2-4">
-			    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
-					<jdoc:include type="modules" name="section-r2-4" style="html5" />
-			    </div>
-			</section>
-		<?php } ?>
-	</header>
+	<div id="row2_collapse_heading" class="accordion-heading visible-phone visible-tablet">
+		<a id="row2_collapse_text" class="heading_hide btn btn-small" href="#collapserow2" data-toggle="collapse">Header Contents</a>
+	</div>
+	<div id="collapserow2" class="collapserow2 collapse">
+		<header id="header-row" class="jumbotron masthead">
+			<?php // Position section-r2-1 - use as logo or header ?>
+			<?php if ($sectionR2a > 0) { ?>
+				<header id="section-r2-1">
+				    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
+						<jdoc:include type="modules" name="section-r2-1" style="html5" />
+				    </div>
+				</header>
+			<?php } ?>
+		
+			<?php // Position section-r2-2 - use as tagline (related to logo/header) ?>
+			<?php if ($sectionR2b > 0) { ?>
+				<aside id="section-r2-2">
+				    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
+						<jdoc:include type="modules" name="section-r2-2" style="html5" />
+				    </div>
+				</saide>
+			<?php } ?>
+		
+			<?php // Position section-r2-3 - use as search position ?>
+			<?php if ($sectionR2c > 0) { ?>
+				<section id="section-r2-2">
+				    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
+						<jdoc:include type="modules" name="section-r2-3" style="html5" />
+				    </div>
+				</section>
+			<?php } ?>
+		
+			<?php // Position section-r2-4 - no specified role ?>
+			<?php if ($sectionR2d > 0) { ?>
+				<section id="section-r2-4">
+				    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
+						<jdoc:include type="modules" name="section-r2-4" style="html5" />
+				    </div>
+				</section>
+			<?php } ?>
+		</header>
+	</div>
 <?php } ?>
 
 <?php // Position nav-r3 ?>
@@ -481,6 +488,7 @@ else { ?>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-carousel.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/kwd-j-bootstrap.js"></script>
 
 	<?php // Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 ?>
 	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
