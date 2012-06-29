@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.2
+ * Version: 		0.0.3
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -87,19 +87,12 @@ $row13Active = $sectionR13a + $sectionR13b + $sectionR13c + $sectionR13d;
  * Get the column widths and navigation row info.
 /* ===================================================================== */
 
-$activateTopNav = $this->params->get('topnav');
-$activateNavR1 = $this->params->get('navr1');
-
 $logoCols = $this->params->get('logo');			// section-r2-1
 $taglineCols = $this->params->get('tagline');	// section-r2-2
 $searchCols = $this->params->get('search');		// section-r2-3
 $sectionColsR2d = $this->params->get('section-r2-4');
 
-$activateNavR3 = $this->params->get('navr3');
-
 $sectionColsR4 = $this->params->get('section-r4');
-
-$activateNavR5 = $this->params->get('navr5');
 
 if ($this->params->get('CalculateR6')) {
 	// Divide the total columns by the number of active modules
@@ -136,8 +129,6 @@ else {
 	$sectionColsR7c = $this->params->get('section-r7-3');
 	$sectionColsR7d = $this->params->get('section-r7-4');
 }
-
-$activateNavR8 = $this->params->get('navr8');
 
 if ($this->params->get('CalculateMain')) {
 	$mainLeftCols = $this->params->set('mainleft', '3');
@@ -214,9 +205,6 @@ else {
 	$sectionColsR13c = $this->params->get('section-r13-3');
 	$sectionColsR13d = $this->params->get('section-r13-4');
 }
-
-$activateNavR14 = $this->params->get('navr14');
-$activateTopNav = $this->params->get('bottomnav');
 
 /* =====================================================================
  * 	End of column width settings

@@ -1,7 +1,22 @@
+/* =====================================================================
+ * File:        kwd-j-bootstrap.css
+ * Author:      Chris Jones-Gill - KISS Web Design
+ * Version:     0.1
+ * Created:     June 2012
+ * Copyright:   KISS Web Design - (C) 2012 - All rights reserved
+ * License:     This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+ *              http://creativecommons.org/licenses/by-sa/3.0/
+/* ===================================================================== */
+
 .heading_hide:before {
     content: 'Hide ';
 }
 
 .heading_show:before {
     content: 'Show ';
+}
+
+.spanall {
+    margin: 0;
+    padding: 0;
 }
