@@ -59,10 +59,10 @@ $sectionR10b = (int) ($this->countModules('section-r10-2') > 0);
 $sectionR10c = (int) ($this->countModules('section-r10-3') > 0);
 $sectionR10d = (int) ($this->countModules('section-r10-4') > 0);
 
-$sectionR11a = (int) ($this->countModules('section-r10-1') > 0);
-$sectionR11b = (int) ($this->countModules('section-r10-2') > 0);
-$sectionR11c = (int) ($this->countModules('section-r10-3') > 0);
-$sectionR11d = (int) ($this->countModules('section-r10-4') > 0);
+$sectionR11a = (int) ($this->countModules('section-r11-1') > 0);
+$sectionR11b = (int) ($this->countModules('section-r11-2') > 0);
+$sectionR11c = (int) ($this->countModules('section-r11-3') > 0);
+$sectionR11d = (int) ($this->countModules('section-r11-4') > 0);
 
 $section12 = (int) ($this->countModules('section-r12') > 0);
 
@@ -302,6 +302,7 @@ if ($googleWebFont3) {
     $doc->addStyleSheet($template.'/assets/css/bootstrap-responsive.css');
     $doc->addStyleSheet($template.'/assets/css/docs.css');
     $doc->addStyleSheet($template.'/assets/js/google-code-prettify/prettify.css');
+    $doc->addStyleSheet($template.'/assets/css/kwd-j-bootstrap.css');
     
     
 // Musthave JS
