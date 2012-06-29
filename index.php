@@ -68,7 +68,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 </head>
 
-<body class="<?php echo htmlspecialchars($bodyFontFamily); ?>"data-spy="scroll" data-target=".subnav" data-offset="50">
+<body class="<?php echo htmlspecialchars($bodyFontFamily); ?>" data-spy="scroll" data-target=".subnav" data-offset="50">
 
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 
@@ -77,10 +77,8 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-	        	<button type="button"class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+	        	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<i class="icon-arrow-down icon-white"></i>
 				</button>
 				<a class="brand" href="<?php echo $this->baseurl ?>/"><?php echo htmlspecialchars($app->getCfg('sitename'));?></a>
 				<nav id="nav-top" role="navigation" class="nav-collapse collapse">
