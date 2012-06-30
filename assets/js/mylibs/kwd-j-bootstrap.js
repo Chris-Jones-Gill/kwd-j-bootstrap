@@ -39,7 +39,7 @@ $('#collapserow'+rownum).on('hidden', function () {
 		rowheading.removeClass('heading_hide');
     })
 }
-rowswitch(0,2);
+rowSwitch(0,2);
 rowSwitch(0,4);
 rowSwitch(0,6);
 rowSwitch(0,7);

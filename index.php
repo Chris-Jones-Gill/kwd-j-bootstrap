@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.6
+ * Version: 		0.0.7
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -59,8 +59,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 // End of the IE specific stuff
 ?>
 
-    <?php // Le fav and touch icons ?>
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <?php // Le touch icons ?>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">

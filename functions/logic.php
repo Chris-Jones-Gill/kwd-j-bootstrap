@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.4
+ * Version: 		0.0.5
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -18,7 +18,6 @@ $adaptiveImages			= $this->params->get('adaptiveImages');
 $setGeneratorTag		= $this->params->get('setGeneratorTag');
 $analytics 				= $this->params->get('analytics');
 // Get the site logo filename
-$SiteLogo				= $this->params->get('SiteLogo');
 
 //-----------------------------Lets get the info we need for the grid-----------------------------
 // Check for modules in columns
@@ -295,6 +294,9 @@ if ($googleWebFont3) {
 // Musthave JS
 
   $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');
+
+// favicon
+  $doc->addCustomTag('<link rel="shortcut icon" href="'.$template.'/assets/ico/favicon.ico">');
 
 
 // Metas
