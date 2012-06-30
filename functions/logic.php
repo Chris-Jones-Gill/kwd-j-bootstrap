@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.3
+ * Version: 		0.0.4
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -14,7 +14,6 @@
 
 // Define shortcuts for template parameters
 $loadMoo 				= $this->params->get('loadMoo');
-$jQuery 				= $this->params->get('jQuery');
 $adaptiveImages			= $this->params->get('adaptiveImages');
 $setGeneratorTag		= $this->params->get('setGeneratorTag');
 $analytics 				= $this->params->get('analytics');
@@ -294,9 +293,9 @@ if ($googleWebFont3) {
     
     
 // Musthave JS
-if ($jQuery) {
+
   $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');
-}
+
 
 // Metas
 $doc->setMetaData( 'HandheldFriendly', 'True' );

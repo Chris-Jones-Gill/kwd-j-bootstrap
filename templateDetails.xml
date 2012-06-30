@@ -8,7 +8,7 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.0.5</version>	
+	<version>0.0.6</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
@@ -75,11 +75,6 @@
 		<fields name="params">
 			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/kwd-j-bootstrap/functions" >
 				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a lot of Kb by not loading it. Setting this to no will also disable caption.js">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
-				</field>
-				<field type="spacer" default=" " />
-				<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load the latest, minified, version of jQuery from Google?">
 					<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
