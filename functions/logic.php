@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.5
+ * Version: 		0.0.6
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -307,9 +307,11 @@ $doc->setMetaData( 'apple-mobile-web-app-capable', 'True' );
 $doc->setMetaData( 'apple-mobile-web-app-status-bar-style', 'black-translucent' );
 $doc->setMetaData( 'cleartype', 'on', true );
 $doc->setMetaData( 'X-UA-Compatible', 'IE=edge,chrome=1', true );
-
-// If (polyfill) JS
+/*
+// If (polyfill) JS - moved to index.php
 $doc->addCustomTag('<!--[if (lt IE 9) & (!IEMobile)]>');
-$doc->addCustomTag('<script src="'.$template.'/js/libs/selectivizr-min.js"></script>');
+$doc->addCustomTag('<script src="'.$template.'/assets/js/libs/selectivizr-min.js"></script>');
 $doc->addCustomTag('<![endif]-->');
+*/
+ */
 //----------------------------- End head code -----------------------------

@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.8
+ * Version: 		0.0.9
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -111,11 +111,11 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<header id="header-row" class="jumbotron masthead">
 				<?php // Position section-r2-1 - use as logo or header ?>
 				<?php if ($sectionR2a > 0) { ?>
-					<header id="section-r2-1">
+					<div id="section-r2-1">
 					    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
 							<jdoc:include type="modules" name="section-r2-1" style="html5" />
 					    </div>
-					</header>
+					</div>
 				<?php } ?>
 			
 				<?php // Position section-r2-2 - use as tagline (related to logo/header) ?>
