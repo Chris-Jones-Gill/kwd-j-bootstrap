@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.9
+ * Version: 		0.0.10
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -26,15 +26,14 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
     <![endif]-->
 	<?php // Media query, for IE6-8 support of min/max width media queries ?>
 	<!--[if lt IE 9]>
-		<script>
-  			document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/libs/respond.min.js"></s'+'cript>');
-  		</script>      
+  			<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/assets/js/libs/respond.min.js"></script> 
     <![endif]-->
 	<!--[if (gte IE 6)&(lte IE 8)]>
-  			document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/libs/selectivizr-min.js"></s'+'cript>');
+  			<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/assets/js/libs/selectivizr-min.js"></script>
 	<![endif]-->
 	<?php // Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 ?>
 	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
+		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/imgSizer.js"></script>
 	<script>
 		addLoadEvent(function() {
 			imgSizer.collate();
@@ -547,10 +546,6 @@ else { ?>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/kwd-j-bootstrap.js"></script>
 
-	<?php // Responsive images, for IE7-8 support of dynamic image resizing - doesn't work in IE6 ?>
-	<!--[if (lt IE 9) & (gt IE 6) & (!IEMobile)]>
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/imgSizer.js"></script>
-	<![endif]-->
 
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 </body>
