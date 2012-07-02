@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.10
+ * Version: 		0.0.11
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -13,6 +13,10 @@
 include_once (dirname(__FILE__).DS.'functions/logic.php');  
 ?>
 <!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 <jdoc:include type="head" />
 
@@ -23,10 +27,6 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<?php // Le HTML5 shim, for IE6-8 support of HTML5 elements ?>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-	<?php // Media query, for IE6-8 support of min/max width media queries ?>
-	<!--[if lt IE 9]>
-  			<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/assets/js/libs/respond.min.js"></script> 
     <![endif]-->
 	<!--[if (gte IE 6)&(lte IE 8)]>
   			<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/assets/js/libs/selectivizr-min.js"></script>
@@ -63,12 +63,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyFontFamily); ?>" data-spy="scroll" data-target=".subnav" data-offset="50">
-
-<noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 
 <?php // Position nav-top ?>
 <?php if ($navTop > 0) { ?>
@@ -89,7 +87,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php // container for page contents ?>
 <div class="container">
-
+<noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 <?php // Position nav-r1 ?>
 <?php if ($navR1 > 0) { ?>
 	<div id="navr1" class="spanall">
@@ -519,7 +517,7 @@ else { ?>
 		</footer>
 	</div>
 <?php } ?>
-
+<noscript class="spanall">JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 <jdoc:include type="modules" name="debug"/>
 
 </div> <?php // container ?>
@@ -530,23 +528,9 @@ else { ?>
     // ================================================== ?>
     <?php // Placed at the end of the document so the pages load faster ?>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/google-code-prettify/prettify.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-transition.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-alert.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-modal.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-dropdown.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-tab.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-tooltip.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-popover.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-button.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-collapse.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-carousel.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-typeahead.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/kwd-j-bootstrap.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-all.msmin.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.msmin.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/kwd-j-bootstrap.msmin.js"></script>
 
-
-<noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
 </body>
 </html>
