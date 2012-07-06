@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.12
+ * Version: 		0.0.13
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -105,7 +105,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<a id="row2_collapse_text" class="heading_hide btn btn-small" href="#collapserow2" data-toggle="collapse">Header Contents</a>
 		</div>
 		<div id="collapserow2" class="collapserow2 collapse in">
-			<header id="header-row" class="jumbotron masthead">
+			<header id="header-row" class="jumbotron">
 				<?php // Position section-r2-1 - use as logo or header ?>
 				<?php if ($sectionR2a > 0) { ?>
 					<div id="section-r2-1">
@@ -528,6 +528,7 @@ else { ?>
     // ================================================== ?>
     <?php // Placed at the end of the document so the pages load faster ?>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/google-code-prettify/prettify.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-transition.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-alert.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-modal.js"></script>

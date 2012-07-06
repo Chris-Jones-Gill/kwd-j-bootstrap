@@ -8,7 +8,7 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.0.13</version>	
+	<version>0.0.14</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
@@ -491,7 +491,7 @@
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
-                <field name="section-13-1" type="list" default="12" label="Section Row 13 position 1 width" >
+                <field name="section-r13-1" type="list" default="12" label="Section Row 13 position 1 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
 					<option value="3">three</option>
