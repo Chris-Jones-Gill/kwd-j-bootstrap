@@ -1,4 +1,13 @@
 /* =============================================================
+ * bootstrap-scrollspy.js v2.0.4-kwd
+ * 
+ * modified for compatibility with Jooomla menus
+ * see in-line comments for changes, tagged 'KWD'.
+ * Modifications only
+ * Copyright 2012 KISS Web Design
+ * ============================================================== */
+
+/* =============================================================
  * bootstrap-scrollspy.js v2.0.4
  * http://twitter.github.com/bootstrap/javascript.html#scrollspy
  * =============================================================
@@ -16,7 +25,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ============================================================== */
-
 
 !function ($) {
 
@@ -51,11 +59,15 @@
         this.offsets = $([])
         this.targets = $([])
 
+		// KWD
+		// removes the #somelocation from the target using (n.hash)
+		// because joomla menus require the whole path to be used - eg /somepage#somelocation
+		// and $targets needs to be the anchor - eg #somelocation - only
         $targets = this.$body
           .find(this.selector)
-          .map(function () {
+          .map(function (i, n) {
             var $el = $(this)
-              , href = $el.data('target') || $el.attr('href')
+              , href = $el.data('target') || (n.hash)
               , $href = /^#\w/.test(href) && $(href)
             return ( $href
               && href.length
@@ -93,7 +105,12 @@
     , activate: function (target) {
         var active
           , selector
-
+          , newTarget	//KWD - for Joomla compatibility
+	
+		newTarget = window.location.pathname + target
+		target = newTarget
+		// Now target has the url path plus the # anchor
+		// so it matches the joomla menu requirements - external URL, /somepage#somelocation
         this.activeTarget = target
 
         $(this.selector)

@@ -1309,9 +1309,9 @@
 
         $targets = this.$body
           .find(this.selector)
-          .map(function () {
+          .map(function (i, n) {
             var $el = $(this)
-              , href = $el.data('target') || $el.attr('href')
+              , href = $el.data('target') || (n.hash)
               , $href = /^#\w/.test(href) && $(href)
             return ( $href
               && href.length
@@ -1349,7 +1349,13 @@
     , activate: function (target) {
         var active
           , selector
-
+          , newTarget	//KWD - for Joomla compatibility
+	
+		newTarget = window.location.pathname + target
+		target = newTarget
+		// Now target has the url path plus the # anchor
+		// so it matches the joomla menu requirements - external URL, /somepage#somelocation
+ 
         this.activeTarget = target
 
         $(this.selector)
