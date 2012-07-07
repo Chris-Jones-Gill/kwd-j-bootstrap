@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.13
+ * Version: 		0.0.14
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -109,7 +109,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 				<?php // Position section-r2-1 - use as logo or header ?>
 				<?php if ($sectionR2a > 0) { ?>
 					<div id="section-r2-1">
-					    <div class="span<?php echo htmlspecialchars($logoCols); ?>">
+					    <div class="noLeftMargin span<?php echo htmlspecialchars($logoCols); ?>">
 							<jdoc:include type="modules" name="section-r2-1" style="html5" />
 					    </div>
 					</div>
@@ -191,7 +191,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<?php // Position section-r6-1 ?>
 			<?php if ($sectionR6a > 0) { ?>
 				<div id="section-r6-1">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR6a); ?>">
+				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6a); ?>">
 						<jdoc:include type="modules" name="section-r6-1" style="html5" />
 				    </div>
 				</div>
@@ -238,7 +238,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<?php // Position section-r7-1 ?>
 			<?php if ($sectionR7a > 0) { ?>
 				<div id="section-r7-1">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR7a); ?>">
+				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7a); ?>">
 						<jdoc:include type="modules" name="section-r7-1" style="html5" />
 				    </div>
 				</div>
@@ -287,7 +287,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <div id="mainRow" class="spanall">                               
 	<?php // Position section-main-left ?>
 	<?php if ($sectionMainLeft > 0) { ?>
-		<div id="section-main-left" class="span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
+		<div id="section-main-left" class="noLeftMargin  span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
 			<jdoc:include type="modules" name="section-main-left" style="html5" />
 		</div>
 	<?php } ?>
@@ -318,7 +318,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<?php // Position section-r10-1 ?>
 			<?php if ($sectionR10a > 0) { ?>
 				<div id="section-r10-1">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR10a); ?>">
+				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10a); ?>">
 						<jdoc:include type="modules" name="section-r10-1" style="html5" />
 				    </div>
 				</div>
@@ -365,7 +365,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<?php // Position section-r11-1 ?>
 			<?php if ($sectionR11a > 0) { ?>
 				<div id="section-r11-1">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR11a); ?>">
+				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11a); ?>">
 						<jdoc:include type="modules" name="section-r11-1" style="html5" />
 				    </div>
 				</div>
@@ -431,7 +431,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 				<?php // Position section-r13-1 ?>
 				<?php if ($sectionR13a > 0) { ?>
 					<div id="section-r13-1">
-					    <div class="span<?php echo htmlspecialchars($sectionColsR13a); ?>">
+					    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13a); ?>">
 							<jdoc:include type="modules" name="section-r13-1" style="html5" />
 					    </div>
 					</div>
