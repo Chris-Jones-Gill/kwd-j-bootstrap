@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.14
+ * Version: 		0.0.15
  * Created: 		June 2012
  * This Version:	June 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -543,6 +543,12 @@ else { ?>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-typeahead.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/application.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/kwd-j-bootstrap.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
+	<script type="text/javascript" charset="utf-8">
+	  jQuery(document).ready(function(){
+	    jQuery("a[rel^='prettyPhoto']").prettyPhoto();
+	  });
+	</script>
  
 </body>
 </html>
