@@ -1,12 +1,12 @@
 /* =====================================================================
  * File:        kwd-j-bootstrap.css
  * Author:      Chris Jones-Gill - KISS Web Design
- * Version:     0.2
+ * Version:     0.3
  * Created:     June 2012
  * Copyright:   KISS Web Design - (C) 2012 - All rights reserved
  * License:     This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
  *              http://creativecommons.org/licenses/by-sa/3.0/
-/* ===================================================================== */
+ * ===================================================================== */
 
 .heading_hide:before {
     content: 'Hide ';
@@ -14,6 +14,24 @@
 
 .heading_show:before {
     content: 'Show ';
+}
+
+/* This is to add the down-arrow style on all dropdown menus */
+.dropdown-toggle:after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid red;
+    content: "";
+    display: inline-block;
+    height: 0;
+    margin-bottom: 2px;
+    margin-left: 5px;
+}
+
+/* This is to replace the down-arrow style with an up-arrow for drop-ups */
+.dropup .dropdown-toggle:after {
+    border-bottom: 4px solid red;
+    border-top: none;
 }
 
 .noLeftMargin {
