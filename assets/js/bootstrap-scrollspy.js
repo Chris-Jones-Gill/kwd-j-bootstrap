@@ -109,7 +109,7 @@
 	
 		newTarget = window.location.pathname + target
 		target = newTarget
-		// Now target has the url path plus the # anchor
+		// KWD - Now target has the url path plus the # anchor
 		// so it matches the joomla menu requirements - external URL, /somepage#somelocation
         this.activeTarget = target
 
