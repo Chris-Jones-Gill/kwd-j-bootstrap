@@ -1,5 +1,11 @@
 /* ===========================================================
- * bootstrap-tooltip.js v2.0.4-KWD -- Add destroy and non rel= tooltip functions
+ * bootstrap-tooltip.js v2.0.4-KWD
+ * Added destroy and non rel="tooltip" functions for HTML5 compatibility
+ * Modifications only
+ * Copyright 2012 KISS Web Design
+ * =========================================================== */
+
+/* ===========================================================
  * http://twitter.github.com/bootstrap/javascript.html#tooltips
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ===========================================================
