@@ -8,7 +8,7 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.1.0</version>	
+	<version>0.1.1</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
@@ -418,7 +418,7 @@
             </fieldset>	
 
 			<fieldset name="Position Spans Row 11" label="Span for Positions on Row 11">
-				<field name="CalculateR7" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
+				<field name="CalculateR11" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
 				</field>
