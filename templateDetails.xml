@@ -8,7 +8,7 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.1.1</version>	
+	<version>0.1.2</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
@@ -112,7 +112,8 @@
 				<field name="googleWebFontTargets3" type="text" default="" label="Google Web Font Targets" description="A comma seperated list of the html elements, CSS IDs, and classes to apply the selected Google Web Font to. If targeting the body, be sure to set the Body Font Family to None Selected." size="50" />								
 			</fieldset>
 					
-			<fieldset name="Header Row Module Widths" label="Header Row Module Widths">
+			<fieldset name="Header Row Module Spans" label="Header Row Module Spans">
+               <field name="row2Name" type="text" default="Header Contents" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
                <field name="logo" type="list" default="12" label="logo width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -174,12 +175,14 @@
 			</fieldset>	
 
 			<fieldset name="Position Spans Row 4" label="Span for Positions on Row 4">
-                <field name="section-r4" type="list" default="12" label="Section Row 4 position width" >
+               	<field name="row4Name" type="text" default="Row 4" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
+                <field name="section-r4" type="list" default="12" label="Section Row 4 position width" description="Fixed at twelve columns, use module specific css classes to set the span for individual modules.">
 					<option value="12">twelve</option>
 				</field>
 			</fieldset>
 		
 			<fieldset name="Position Spans Row 6" label="Span for Positions on Row 6">
+               	<field name="row6Name" type="text" default="Row 6" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
 				<field name="CalculateR6" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -243,6 +246,7 @@
             </fieldset>	
 
 			<fieldset name="Position Spans Row 7" label="Span for Positions on Row 7">
+               	<field name="row7Name" type="text" default="Row 7" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
 				<field name="CalculateR7" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -355,6 +359,7 @@
 			</fieldset>	
 
 			<fieldset name="Position Spans Row 10" label="Span for Positions on Row 10">
+               	<field name="row10Name" type="text" default="Row 10" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
 				<field name="CalculateR10" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -418,6 +423,7 @@
             </fieldset>	
 
 			<fieldset name="Position Spans Row 11" label="Span for Positions on Row 11">
+               	<field name="row11Name" type="text" default="Row 11" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
 				<field name="CalculateR11" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>
@@ -481,12 +487,14 @@
             </fieldset>	
 
 			<fieldset name="Position Spans Row 12" label="Span for Positions on Row 12">
-                <field name="section-r12" type="list" default="12" label="Section Row 12 position 1 width" >
+               	<field name="row12Name" type="text" default="Row 12" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
+                <field name="section-r12" type="list" default="12" label="Section Row 12 position 1 width"  description="Fixed at twelve columns, use module specific css classes to set the span for individual modules.">
 					<option value="12">twelve</option>
 				</field>
 			</fieldset>
 
 			<fieldset name="Position Spans Row 13" label="Span for Positions on Row 13">
+               	<field name="row13Name" type="text" default="Footer" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
 				<field name="CalculateR13" type="radio" default="1" label="Auto Calculate columns spanned?" description="Calculate the number of columns required by dividing the number of active positions by the available columns. This will override anything you enter in this section.">
                 	<option value="1">Yes</option>
 					<option value="0">No</option>

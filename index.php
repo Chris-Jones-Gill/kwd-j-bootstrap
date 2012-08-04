@@ -2,9 +2,9 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.15
+ * Version: 		0.0.16
  * Created: 		June 2012
- * This Version:	June 2012
+ * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
  * License:			Apache Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
 /* ===================================================================== */
@@ -102,7 +102,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<div id="row2" class="spanall">
 	
 		<div id="row2_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row2_collapse_text" class="heading_hide btn btn-small" href="#collapserow2" data-toggle="collapse">Header Contents</a>
+			<a id="row2_collapse_text" class="heading_hide btn btn-small" href="#collapserow2" data-toggle="collapse"><?php echo htmlspecialchars($rowTwoName) ?></a>
 		</div>
 		<div id="collapserow2" class="collapserow2 collapse in">
 			<header id="header-row" class="jumbotron">
@@ -159,7 +159,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($sectionR4 > 0) { ?>
 	<div id="row4" class="spanall">
 		<div id="row4_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row4_collapse_text" class="heading_hide btn btn-small" href="#collapserow4" data-toggle="collapse">Row4 Contents</a>
+			<a id="row4_collapse_text" class="heading_hide btn btn-small" href="#collapserow4" data-toggle="collapse"><?php echo htmlspecialchars($rowFourName) ?></a>
 		</div>
 		<div id="collapserow4" class="collapserow4 collapse in">
 			<div id="section-r4">
@@ -184,7 +184,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row6Active > 0) { ?>
 	<div id="row6" class="spanall">
 		<div id="row6_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row6_collapse_text" class="heading_hide btn btn-small" href="#collapserow6" data-toggle="collapse">Row6 Contents</a>
+			<a id="row6_collapse_text" class="heading_hide btn btn-small" href="#collapserow6" data-toggle="collapse"><?php echo htmlspecialchars($rowSixName) ?></a>
 		</div>
 		<div id="collapserow6" class="collapserow6 collapse in">
 		
@@ -231,7 +231,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row7Active > 0) { ?>
 	<div id="row7" class="spanall">
 		<div id="row7_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row7_collapse_text" class="heading_hide btn btn-small" href="#collapserow7" data-toggle="collapse">Row7 Contents</a>
+			<a id="row7_collapse_text" class="heading_hide btn btn-small" href="#collapserow7" data-toggle="collapse"><?php echo htmlspecialchars($rowSevenName) ?></a>
 		</div>
 		<div id="collapserow7" class="collapserow7 collapse in">
 	
@@ -311,7 +311,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row10Active > 0) { ?>
 	<div id="row10" class="spanall">
 		<div id="row10_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row10_collapse_text" class="heading_hide btn btn-small" href="#collapserow10" data-toggle="collapse">Row10 Contents</a>
+			<a id="row10_collapse_text" class="heading_hide btn btn-small" href="#collapserow10" data-toggle="collapse"><?php echo htmlspecialchars($rowTenName) ?></a>
 		</div>
 		<div id="collapserow10" class="collapserow10 collapse in">
 		
@@ -358,7 +358,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row11Active > 0) { ?>
 	<div id="row11" class="spanall">
 		<div id="row11_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row11_collapse_text" class="heading_hide btn btn-small" href="#collapserow11" data-toggle="collapse">Row11 Contents</a>
+			<a id="row11_collapse_text" class="heading_hide btn btn-small" href="#collapserow11" data-toggle="collapse"><?php echo htmlspecialchars($rowElevenName) ?></a>
 		</div>
 		<div id="collapserow11" class="collapserow11 collapse in">
 		
@@ -405,7 +405,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($sectionR12 > 0) { ?>
 	<div id="row12" class="spanall">
 		<div id="row12_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row12_collapse_text" class="heading_hide btn btn-small" href="#collapserow12" data-toggle="collapse">Row12 Contents</a>
+			<a id="row12_collapse_text" class="heading_hide btn btn-small" href="#collapserow12" data-toggle="collapse"><?php echo htmlspecialchars($rowTwelveName) ?></a>
 		</div>
 		<div id="collapserow12" class="collapserow12 collapse in">
 		
@@ -423,7 +423,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row13Active > 0) { ?>
 	<div id="row13" class="spanall">
 		<div id="row13_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row13_collapse_text" class="heading_hide btn btn-small" href="#collapserow13" data-toggle="collapse">Row13 Contents</a>
+			<a id="row13_collapse_text" class="heading_hide btn btn-small" href="#collapserow13" data-toggle="collapse"><?php echo htmlspecialchars($rowThirteenName) ?></a>
 		</div>
 		<div id="collapserow13" class="collapserow13 collapse in">
 		

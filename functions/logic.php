@@ -2,9 +2,9 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.8
+ * Version: 		0.0.9
  * Created: 		June 2012
- * This Version:	June 2012
+ * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
  * License:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
  * Sources:	Forked from https://github.com/nternetinspired/OneWeb 12/3/2012
@@ -207,6 +207,18 @@ else {
 /* =====================================================================
  * 	End of column width settings
 /* ===================================================================== */
+
+/* =====================================================================
+ * 	Get the row name text for the collapse buttons
+/* ===================================================================== */
+$rowTwoName = $this->params->get('row2Name');
+$rowFourName = $this->params->get('row4Name');
+$rowSixName = $this->params->get('row6Name');
+$rowSevenName = $this->params->get('row7Name');
+$rowTenName = $this->params->get('row10Name');
+$rowElevenName = $this->params->get('row11Name');
+$rowTwelveName = $this->params->get('row12Name');
+$rowThirteenName = $this->params->get('row13Name');
 
 //-----------------------------See if we are on the homepage-----------------------------
 // from Anthony Olsen of Joomla Bamboo, http://www.joomlabamboo.com
