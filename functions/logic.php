@@ -271,6 +271,13 @@ if ( !$loadMoo ) {
 	   if (empty($this->_script['text/javascript']))
 	      unset($this->_script['text/javascript']);
 	}
+	// remove mootools tooltip - additional requirement for post 2.5.1 changes
+	if (isset($this->_script['text/javascript']))
+	{
+	   $this->_script['text/javascript'] = preg_replace('%window\.addEvent\(\'domready\',\s*function\(\)\s*{\s*\$\$\(\'.hasTip\'\).each\(s*function\(el\)\s*{\s*var\s*title\s*=\s*el.get\(\'title\'\);\s*if\s*\(title\)\s*{\s*var\s*parts\s*=\s*title.split\(\'::\',\s*2\);\s*el.store\(\'tip:title\',\s*parts\[0\]\);\s*el.store\(\'tip:text\',\s*parts\[1\]\);\s*}\s*}\);\s*var\s*JTooltips\s*=\s*new\s*Tips\(\$\$\(\'.hasTip\'\),\s*{\s*maxTitleChars:\s*50,\s*fixed:\s*false}\);\s*}\);s*%', '', $this->_script['text/javascript']);
+	   if (empty($this->_script['text/javascript']))
+	      unset($this->_script['text/javascript']);
+	}
 }
 
 // Fix Google Web Font name for CSS
