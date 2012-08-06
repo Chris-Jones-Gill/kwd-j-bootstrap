@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.1.0
+ * Version: 		0.1.1
  * Created: 		June 2012
  * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -62,7 +62,7 @@ $sectionR11b = (int) ($this->countModules('section-r11-2') > 0);
 $sectionR11c = (int) ($this->countModules('section-r11-3') > 0);
 $sectionR11d = (int) ($this->countModules('section-r11-4') > 0);
 
-$section12 = (int) ($this->countModules('section-r12') > 0);
+$sectionR12 = (int) ($this->countModules('section-r12') > 0);
 
 $sectionR13a = (int) ($this->countModules('section-r13-1') > 0);
 $sectionR13b = (int) ($this->countModules('section-r13-2') > 0);
