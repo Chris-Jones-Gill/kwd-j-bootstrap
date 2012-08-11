@@ -63,6 +63,7 @@ FEATURES
  * Media queries for device screen sizes - 480, 980, 1200
  * Media query for high density mobile displays (eg iPhone 4) - min-device-pixel-ratio: 1.5
  * Small screensize optimization of the top menu
+ * Google analytics built-in, enter GA ID in template manager
  * The following module positions are available:
 	+ Top row
 		- nav-top : fixed to the top of the screen
@@ -124,7 +125,7 @@ PLANNED FEATURES
   
  * 3 selectable icon fonts - general purpose, social networking light, social networking dark
  * Logo upload and select
- * Google Analytics and MixPanel built-in
+ * MixPanel Analytics built-in
  * Accessibility features
   
 ------------  
@@ -173,8 +174,9 @@ Some parts are public domain, and as such have no licence restrictions.
     - assets/js/bootstrap-tooltip.js
     - assets/js/bootstrap-transition.js
     - assets/js/bootstrap-typehead.js
+    - assets/js/mylibs/kwd-j-bootstrap.js [except debouncedresize function]
     - assests/js/google-code-prettify/* [all files]
-    - assets/css/bootstrap.ss
+    - assets/css/bootstrap.css
     - assets/css/bootstrap-responsive.css
     - assets/css/docs.css
     - documentation/assets/* [all files]
@@ -193,7 +195,8 @@ Some parts are public domain, and as such have no licence restrictions.
 	- assets/js/libs/modernizr.2.5.3.custom.js
 	- assets/js/libs/respond.min.js
 	- assets/js/libs/selectivizr.min.js
-	- assets/js/plugins.js
+	- assets/js/mylibs/plugins.js
+	- assets/js/mylibs/kwd-j-bootstrap.js [debouncedresize function only]
  * The BSD Licence (BSD):
 	- [http://opensource.org/licenses/BSD-3-Clause](http://opensource.org/licenses/BSD-3-Clause "Link to the BSD licence site")
 	- A copy of the full wording, in plain text, of this licence is included with this project in the filname BSD-licence.txt

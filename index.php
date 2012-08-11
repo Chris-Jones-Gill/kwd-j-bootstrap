@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.16
+ * Version: 		0.0.17
  * Created: 		June 2012
  * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -64,6 +64,13 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+<?php if ($analytics != "UA-XXXXX-X") { ?>
+<!-- http://mths.be/aab -->
+<script>
+			var _gaq=[['_setAccount','<?php echo htmlspecialchars($analytics); ?>'],['_trackPageview']]; 
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<?php } ?>
 </head>
 
 <body class="<?php echo htmlspecialchars($bodyFontFamily); ?>" data-spy="scroll" data-target=".subnav" data-offset="50">
@@ -102,43 +109,59 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 	<div id="row2" class="spanall">
 	
 		<div id="row2_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row2_collapse_text" class="heading_hide btn btn-small" href="#collapserow2" data-toggle="collapse"><?php echo htmlspecialchars($rowTwoName) ?></a>
+			<a id="row2_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow2" data-toggle="collapse"><?php echo htmlspecialchars($rowTwoName) ?></a><br /><br />
 		</div>
 		<div id="collapserow2" class="collapserow2 collapse in">
 			<header id="header-row" class="jumbotron">
 				<?php // Position section-r2-1 - use as logo or header ?>
 				<?php if ($sectionR2a > 0) { ?>
 					<div id="section-r2-1">
-					    <div class="noLeftMargin span<?php echo htmlspecialchars($logoCols); ?>">
-							<jdoc:include type="modules" name="section-r2-1" style="html5" />
-					    </div>
+						<?php if($r2aNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($logoCols); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($logoCols); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r2-1" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			
 				<?php // Position section-r2-2 - use as tagline (related to logo/header) ?>
 				<?php if ($sectionR2b > 0) { ?>
 					<aside id="section-r2-2">
-					    <div class="span<?php echo htmlspecialchars($taglineCols); ?>">
-							<jdoc:include type="modules" name="section-r2-2" style="html5" />
-					    </div>
-					</saide>
+						<?php if($r2bNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($taglineCols); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($taglineCols); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r2-2" style="html5" />
+					    	</div>
+					</aside>
 				<?php } ?>
 			
 				<?php // Position section-r2-3 - use as search position ?>
 				<?php if ($sectionR2c > 0) { ?>
 					<div id="section-r2-2">
-					    <div class="span<?php echo htmlspecialchars($searchCols); ?>">
-							<jdoc:include type="modules" name="section-r2-3" style="html5" />
-					    </div>
+						<?php if($r2cNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($searchCols); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($searchCols); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r2-3" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			
 				<?php // Position section-r2-4 - no specified role ?>
 				<?php if ($sectionR2d > 0) { ?>
 					<div id="section-r2-4">
-					    <div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
-							<jdoc:include type="modules" name="section-r2-4" style="html5" />
-					    </div>
+						<?php if($r2dNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR2d); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR2d); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r2-4" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			</header>
@@ -148,10 +171,16 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php // Position nav-r3 ?>
 <?php if ($navR3 > 0) { ?>
+<mmenu></mmenu>
 	<div id="navr3" class="spanall">
-		<nav id="nav-r3" role="navigation" class="subnav">
-			<jdoc:include type="modules" name="nav-r3" style="html5" />
-		</nav>
+		<div id="row3_collapse_heading" class="accordion-heading visible-phone visible-tablet">
+			<a id="row3_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow3" data-toggle="collapse">Menu</a><br /><br />
+		</div>
+		<div id="collapserow3" class="collapserow3 collapse in">
+			<nav id="nav-r3" role="navigation" class="subnav">
+				<jdoc:include type="modules" name="nav-r3" style="html5" />
+			</nav>
+		</div>
 	</div>
 <?php } ?>
 
@@ -159,13 +188,17 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($sectionR4 > 0) { ?>
 	<div id="row4" class="spanall">
 		<div id="row4_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row4_collapse_text" class="heading_hide btn btn-small" href="#collapserow4" data-toggle="collapse"><?php echo htmlspecialchars($rowFourName) ?></a>
+			<a id="row4_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow4" data-toggle="collapse"><?php echo htmlspecialchars($rowFourName) ?></a><br /><br />
 		</div>
 		<div id="collapserow4" class="collapserow4 collapse in">
 			<div id="section-r4">
-			    <div class="span<?php echo htmlspecialchars($sectionColsR4); ?>">
-					<jdoc:include type="modules" name="section-r4" style="html5" />
-			    </div>
+				<?php if($r4aNLM) { ?>
+			    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR4); ?>">
+			    <?php } else { ?>
+			    	<div class="span<?php echo htmlspecialchars($sectionColsR4); ?>">
+			    <?php } ?>
+						<jdoc:include type="modules" name="section-r4" style="html5" />
+			    	</div>
 			</div>
 		</div>
 	</div>
@@ -184,43 +217,59 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row6Active > 0) { ?>
 	<div id="row6" class="spanall">
 		<div id="row6_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row6_collapse_text" class="heading_hide btn btn-small" href="#collapserow6" data-toggle="collapse"><?php echo htmlspecialchars($rowSixName) ?></a>
+			<a id="row6_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow6" data-toggle="collapse"><?php echo htmlspecialchars($rowSixName) ?></a><br /><br />
 		</div>
 		<div id="collapserow6" class="collapserow6 collapse in">
 		
 			<?php // Position section-r6-1 ?>
 			<?php if ($sectionR6a > 0) { ?>
 				<div id="section-r6-1">
-				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6a); ?>">
-						<jdoc:include type="modules" name="section-r6-1" style="html5" />
-				    </div>
+						<?php if($r6aNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6a); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR6a); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r6-1" style="html5" />
+					    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r6-2 ?>
 			<?php if ($sectionR6b > 0) { ?>
 				<div id="section-r6-2">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR6b); ?>">
-						<jdoc:include type="modules" name="section-r6-2" style="html5" />
-				    </div>
+						<?php if($r6bNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6b); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR6b); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r6-2" style="html5" />
+					    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r6-3 ?>
 			<?php if ($sectionR6c > 0) { ?>
 				<div id="section-r6-3">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR6c); ?>">
-						<jdoc:include type="modules" name="section-r6-3" style="html5" />
-				    </div>
+						<?php if($r6cNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6c); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR6c); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r6-3" style="html5" />
+					    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r6-4 ?>
 			<?php if ($sectionR6d > 0) { ?>
 				<div id="section-r6-4">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR6d); ?>">
-						<jdoc:include type="modules" name="section-r6-4" style="html5" />
-				    </div>
+						<?php if($r6dNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR6d); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR6d); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r6-4" style="html5" />
+					    	</div>
 				</div>
 			<?php } ?>
 		</div>
@@ -231,43 +280,59 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row7Active > 0) { ?>
 	<div id="row7" class="spanall">
 		<div id="row7_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row7_collapse_text" class="heading_hide btn btn-small" href="#collapserow7" data-toggle="collapse"><?php echo htmlspecialchars($rowSevenName) ?></a>
+			<a id="row7_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow7" data-toggle="collapse"><?php echo htmlspecialchars($rowSevenName) ?></a><br /><br />
 		</div>
 		<div id="collapserow7" class="collapserow7 collapse in">
 	
 			<?php // Position section-r7-1 ?>
 			<?php if ($sectionR7a > 0) { ?>
 				<div id="section-r7-1">
-				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7a); ?>">
-						<jdoc:include type="modules" name="section-r7-1" style="html5" />
-				    </div>
+					<?php if($r7aNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7a); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR7a); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r7-1" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r7-2 ?>
 			<?php if ($sectionR7b > 0) { ?>
 				<div id="section-r7-2">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR7b); ?>">
-						<jdoc:include type="modules" name="section-r7-2" style="html5" />
-				    </div>
+					<?php if($r7bNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7b); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR7b); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r7-2" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r7-3 ?>
 			<?php if ($sectionR7c > 0) { ?>
 				<div id="section-r7-3">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR7c); ?>">
-						<jdoc:include type="modules" name="section-r7-3" style="html5" />
-				    </div>
+					<?php if($r7cNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7c); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR7c); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r7-3" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r7-4 ?>
 			<?php if ($sectionR7d > 0) { ?>
 				<div id="section-r7-4">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR7d); ?>">
-						<jdoc:include type="modules" name="section-r7-4" style="html5" />
-				    </div>
+					<?php if($r7dNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR7d); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR7d); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r7-4" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		</div>
@@ -290,19 +355,31 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		<div id="section-main-left" class="noLeftMargin  span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
 			<jdoc:include type="modules" name="section-main-left" style="html5" />
 		</div>
-	<?php } ?>
+		<div id="section-main" role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?>">
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
+		</div>
+	<?php } else { ?>
 
-	<?php // Position section-main ?>
-	<div id="section-main" role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?>">
-		<jdoc:include type="message" />
-		<jdoc:include type="component" />
-	</div>
+		<?php // Position section-main ?>
+		<div id="section-main" role="main" class="noLeftMargin span<?php echo htmlspecialchars($mainContentCols); ?>">
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
+		</div>
+	<?php } ?>
 
 	<?php // Position section-main-right ?>
 	<?php if ($sectionMainRight > 0) { ?>
-		<div id="section-main-right" class="span<?php echo htmlspecialchars($mainRightCols); ?>" role="complementary">
-			<jdoc:include type="modules" name="section-main-right" style="html5" />
-		</div>
+		<?php if(($mainContentCols+$mainLeftCols) >= 12) { ?>
+			<div id="section-main-right" class="noLeftMargin span<?php echo htmlspecialchars($mainRightCols); ?>" role="complementary">
+				<jdoc:include type="modules" name="section-main-right" style="html5" />
+			</div>
+		<?php } else { ?>
+			<div id="section-main-right" class="span<?php echo htmlspecialchars($mainRightCols); ?>" role="complementary">
+				<jdoc:include type="modules" name="section-main-right" style="html5" />
+			</div>
+		<?php } ?>
+		
 	<?php } ?>
 </div>
 
@@ -311,43 +388,59 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row10Active > 0) { ?>
 	<div id="row10" class="spanall">
 		<div id="row10_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row10_collapse_text" class="heading_hide btn btn-small" href="#collapserow10" data-toggle="collapse"><?php echo htmlspecialchars($rowTenName) ?></a>
+			<a id="row10_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow10" data-toggle="collapse"><?php echo htmlspecialchars($rowTenName) ?></a><br /><br />
 		</div>
 		<div id="collapserow10" class="collapserow10 collapse in">
 		
 			<?php // Position section-r10-1 ?>
 			<?php if ($sectionR10a > 0) { ?>
 				<div id="section-r10-1">
-				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10a); ?>">
-						<jdoc:include type="modules" name="section-r10-1" style="html5" />
-				    </div>
+					<?php if($r10aNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10a); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR10a); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r10-1" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r10-2 ?>
 			<?php if ($sectionR10b > 0) { ?>
 				<div id="section-r10-2">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR10b); ?>">
-						<jdoc:include type="modules" name="section-r10-2" style="html5" />
-				    </div>
+					<?php if($r10bNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10b); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR10b); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r10-2" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r10-3 ?>
 			<?php if ($sectionR10c > 0) { ?>
 				<div id="section-r10-3">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR10c); ?>">
-						<jdoc:include type="modules" name="section-r10-3" style="html5" />
-				    </div>
+					<?php if($r10cNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10c); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR10c); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r10-3" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r10-4 ?>
 			<?php if ($sectionR10d > 0) { ?>
 				<div id="section-r10-4">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR10d); ?>">
-						<jdoc:include type="modules" name="section-r10-4" style="html5" />
-				    </div>
+					<?php if($r10dNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR10d); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR10d); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r10-4" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		</div>
@@ -358,43 +451,59 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row11Active > 0) { ?>
 	<div id="row11" class="spanall">
 		<div id="row11_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row11_collapse_text" class="heading_hide btn btn-small" href="#collapserow11" data-toggle="collapse"><?php echo htmlspecialchars($rowElevenName) ?></a>
+			<a id="row11_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow11" data-toggle="collapse"><?php echo htmlspecialchars($rowElevenName) ?></a><br /><br />
 		</div>
 		<div id="collapserow11" class="collapserow11 collapse in">
 		
 			<?php // Position section-r11-1 ?>
 			<?php if ($sectionR11a > 0) { ?>
 				<div id="section-r11-1">
-				    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11a); ?>">
-						<jdoc:include type="modules" name="section-r11-1" style="html5" />
-				    </div>
+					<?php if($r11aNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11a); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR11a); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r11-1" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r11-2 ?>
 			<?php if ($sectionR11b > 0) { ?>
 				<div id="section-r11-2">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR11b); ?>">
-						<jdoc:include type="modules" name="section-r11-2" style="html5" />
-				    </div>
+					<?php if($r11bNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11b); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR11b); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r11-2" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r11-3 ?>
 			<?php if ($sectionR11c > 0) { ?>
 				<div id="section-r11-3">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR11c); ?>">
-						<jdoc:include type="modules" name="section-r11-3" style="html5" />
-				    </div>
+					<?php if($r11cNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11c); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR11c); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r11-3" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		
 			<?php // Position section-r11-4 ?>
 			<?php if ($sectionR11d > 0) { ?>
 				<div id="section-r11-4">
-				    <div class="span<?php echo htmlspecialchars($sectionColsR11d); ?>">
-						<jdoc:include type="modules" name="section-r11-4" style="html5" />
-				    </div>
+					<?php if($r11dNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR11d); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR11d); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r11-4" style="html5" />
+				    	</div>
 				</div>
 			<?php } ?>
 		</div>
@@ -405,14 +514,18 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($sectionR12 > 0) { ?>
 	<div id="row12" class="spanall">
 		<div id="row12_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row12_collapse_text" class="heading_hide btn btn-small" href="#collapserow12" data-toggle="collapse"><?php echo htmlspecialchars($rowTwelveName) ?></a>
+			<a id="row12_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow12" data-toggle="collapse"><?php echo htmlspecialchars($rowTwelveName) ?></a><br /><br />
 		</div>
 		<div id="collapserow12" class="collapserow12 collapse in">
 		
 			<div id="section-r12">
-			    <div class="span<?php echo htmlspecialchars($sectionColsR12); ?>">
-					<jdoc:include type="modules" name="section-r12" style="html5" />
-			    </div>
+					<?php if($r12aNLM) { ?>
+				    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR12); ?>">
+				    <?php } else { ?>
+				    	<div class="span<?php echo htmlspecialchars($sectionColsR12); ?>">
+				    <?php } ?>
+							<jdoc:include type="modules" name="section-r12" style="html5" />
+				    	</div>
 			</div>
 		</div>
 	</div>
@@ -423,7 +536,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php if ($row13Active > 0) { ?>
 	<div id="row13" class="spanall">
 		<div id="row13_collapse_heading" class="accordion-heading visible-phone visible-tablet">
-			<a id="row13_collapse_text" class="heading_hide btn btn-small" href="#collapserow13" data-toggle="collapse"><?php echo htmlspecialchars($rowThirteenName) ?></a>
+			<a id="row13_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow13" data-toggle="collapse"><?php echo htmlspecialchars($rowThirteenName) ?></a><br /><br />
 		</div>
 		<div id="collapserow13" class="collapserow13 collapse in">
 		
@@ -431,36 +544,52 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 				<?php // Position section-r13-1 ?>
 				<?php if ($sectionR13a > 0) { ?>
 					<div id="section-r13-1">
-					    <div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13a); ?>">
-							<jdoc:include type="modules" name="section-r13-1" style="html5" />
-					    </div>
+						<?php if($r13aNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13a); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR13a); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r13-1" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 		
 				<?php // Position section-r13-2 ?>
 				<?php if ($sectionR13b > 0) { ?>
 					<div id="section-r13-2">
-					    <div class="span<?php echo htmlspecialchars($sectionColsR13b); ?>">
-							<jdoc:include type="modules" name="section-r13-2" style="html5" />
-					    </div>
+						<?php if($r13bNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13b); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR13b); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r13-2" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			
 				<?php // Position section-r13-3 ?>
 				<?php if ($sectionR13c > 0) { ?>
 					<div id="section-r13-3">
-					    <div class="span<?php echo htmlspecialchars($sectionColsR13c); ?>">
-							<jdoc:include type="modules" name="section-r13-3" style="html5" />
-					    </div>
+						<?php if($r13cNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13c); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR13c); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r13-3" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			
 				<?php // Position section-r13-4 ?>
 				<?php if ($sectionR13d > 0) { ?>
 					<div id="section-r13-4">
-					    <div class="span<?php echo htmlspecialchars($sectionColsR13d); ?>">
-							<jdoc:include type="modules" name="section-r13-4" style="html5" />
-					    </div>
+						<?php if($r13dNLM) { ?>
+					    	<div class="noLeftMargin span<?php echo htmlspecialchars($sectionColsR13d); ?>">
+					    <?php } else { ?>
+					    	<div class="span<?php echo htmlspecialchars($sectionColsR13d); ?>">
+					    <?php } ?>
+								<jdoc:include type="modules" name="section-r13-4" style="html5" />
+					    	</div>
 					</div>
 				<?php } ?>
 			</footer>
@@ -500,7 +629,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 else { ?>
 	<div id="credits" class="spanall">
 		<footer id="credit" class="credit">
-			<div class="span12">
+			<div class="spanall">
 				<div class="custom">
 					<hr>
 					<div class="row-fluid">
@@ -521,7 +650,7 @@ else { ?>
 <jdoc:include type="modules" name="debug"/>
 
 </div> <?php // container ?>
-
+<div id="scrollUp" class="btn btn-large" style="display: none;">Top</div>
 <?php // Scripts ?>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>
     <?php // Le javascript

@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.1.1
+ * Version: 		0.1.2
  * Created: 		June 2012
  * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -219,6 +219,43 @@ $rowTenName = $this->params->get('row10Name');
 $rowElevenName = $this->params->get('row11Name');
 $rowTwelveName = $this->params->get('row12Name');
 $rowThirteenName = $this->params->get('row13Name');
+
+/* =====================================================================
+ * 	Get the NoLeftMargin settings for module positions
+/* ===================================================================== */
+$r2aNLM = $this->params->get('row2aLeftMargin');
+$r2bNLM = $this->params->get('row2bLeftMargin');
+$r2cNLM = $this->params->get('row2cLeftMargin');
+$r2dNLM = $this->params->get('row2dLeftMargin');
+
+$r4aNLM = $this->params->get('row4aLeftMargin');
+
+$r6aNLM = $this->params->get('row6aLeftMargin');
+$r6bNLM = $this->params->get('row6bLeftMargin');
+$r6cNLM = $this->params->get('row6cLeftMargin');
+$r6dNLM = $this->params->get('row6dLeftMargin');
+
+$r7aNLM = $this->params->get('row7aLeftMargin');
+$r7bNLM = $this->params->get('row7bLeftMargin');
+$r7cNLM = $this->params->get('row7cLeftMargin');
+$r7dNLM = $this->params->get('row7dLeftMargin');
+
+$r10aNLM = $this->params->get('row10aLeftMargin');
+$r10bNLM = $this->params->get('row10bLeftMargin');
+$r10cNLM = $this->params->get('row10cLeftMargin');
+$r10dNLM = $this->params->get('row10dLeftMargin');
+
+$r11aNLM = $this->params->get('row11aLeftMargin');
+$r11bNLM = $this->params->get('row11bLeftMargin');
+$r11cNLM = $this->params->get('row11cLeftMargin');
+$r11dNLM = $this->params->get('row11dLeftMargin');
+
+$r12aNLM = $this->params->get('row12aLeftMargin');
+
+$r13aNLM = $this->params->get('row13aLeftMargin');
+$r13bNLM = $this->params->get('row13bLeftMargin');
+$r13cNLM = $this->params->get('row13cLeftMargin');
+$r13dNLM = $this->params->get('row13dLeftMargin');
 
 //-----------------------------See if we are on the homepage-----------------------------
 // from Anthony Olsen of Joomla Bamboo, http://www.joomlabamboo.com

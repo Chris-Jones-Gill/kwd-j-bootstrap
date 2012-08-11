@@ -8,7 +8,7 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.1.4</version>	
+	<version>0.1.5</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
@@ -128,6 +128,10 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row2aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
 							
 				<field name="tagline" type="list" default="12" label="tagline width" description="Default position is section-r2-2">
 					<option value="1">one</option>
@@ -142,6 +146,10 @@
 					<option value="10">ten</option>
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
+				</field>
+				<field name="row2bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
 				
 				<field name="search" type="list" default="12" label="search width" description="Default position is section-r2-3">
@@ -158,6 +166,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row2cLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
                 <field name="section-r2-4" type="list" default="12" label="Section Row 2 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -172,12 +185,20 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row2dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
 			</fieldset>	
 
 			<fieldset name="Position Spans Row 4" label="Span for Positions on Row 4">
                	<field name="row4Name" type="text" default="Row 4" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
                 <field name="section-r4" type="list" default="12" label="Section Row 4 position width" description="Fixed at twelve columns, use module specific css classes to set the span for individual modules.">
 					<option value="12">twelve</option>
+				</field>
+				<field name="row4aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
 			</fieldset>
 		
@@ -201,6 +222,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row6aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r6-2" type="list" default="12" label="Section Row 6 position 2 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -215,6 +241,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row6bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r6-3" type="list" default="12" label="Section Row 6 position 3 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -229,6 +260,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row6cLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				
 				<field name="section-r6-4" type="list" default="12" label="Section Row 6 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -242,6 +278,10 @@
 					<option value="10">ten</option>
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
+				</field>
+				<field name="row6dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
             </fieldset>	
 
@@ -265,6 +305,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row7aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r7-2" type="list" default="12" label="Section Row 7 position 2 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -279,6 +324,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row7bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r7-3" type="list" default="12" label="Section Row 7 position 3 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -293,6 +343,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row7cLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r7-4" type="list" default="12" label="Section Row 7 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -306,6 +361,10 @@
 					<option value="10">ten</option>
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
+				</field>
+				<field name="row7dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
             </fieldset>	
 		
@@ -378,6 +437,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row10aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r10-2" type="list" default="12" label="Section Row 10 position 2 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -392,6 +456,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row10bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r10-3" type="list" default="12" label="Section Row 10 position 3 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -406,6 +475,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row10cLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r10-4" type="list" default="12" label="Section Row 10 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -419,6 +493,10 @@
 					<option value="10">ten</option>
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
+				</field>
+				<field name="row10dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
             </fieldset>	
 
@@ -442,6 +520,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row11aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r11-2" type="list" default="12" label="Section Row 11 position 2 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -456,6 +539,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row11bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r11-3" type="list" default="12" label="Section Row 11 position 3 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -470,6 +558,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row11cLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r11-4" type="list" default="12" label="Section Row 11 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -484,12 +577,20 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row11dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
             </fieldset>	
 
 			<fieldset name="Position Spans Row 12" label="Span for Positions on Row 12">
                	<field name="row12Name" type="text" default="Row 12" label="Name for this row" description="When this row collapses on a small screen, this is the text that will be displayed in the show/hide button" size="50" />
                 <field name="section-r12" type="list" default="12" label="Section Row 12 position 1 width"  description="Fixed at twelve columns, use module specific css classes to set the span for individual modules.">
 					<option value="12">twelve</option>
+				</field>
+				<field name="row12aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
 			</fieldset>
 
@@ -513,6 +614,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row13aLeftMargin" type="radio" default="1" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r13-2" type="list" default="12" label="Section Row 13 position 2 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -527,6 +633,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row13bLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r13-3" type="list" default="12" label="Section Row 13 position 3 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -541,6 +652,11 @@
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
 				</field>
+				<field name="row13bcLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
 				<field name="section-r13-4" type="list" default="12" label="Section Row 13 position 4 width" >
 					<option value="1">one</option>
 					<option value="2">two</option>
@@ -554,6 +670,10 @@
 					<option value="10">ten</option>
 					<option value="11">eleven</option>
 					<option value="12">twelve</option>
+				</field>
+				<field name="row13dLeftMargin" type="radio" default="0" label="No Left Margin?" description="Selecting Yes will force this module position to have no left margin">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
 				</field>
             </fieldset>	
 

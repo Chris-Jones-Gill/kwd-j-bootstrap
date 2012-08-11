@@ -1,12 +1,16 @@
 /* =====================================================================
  * File:        kwd-j-bootstrap.css
  * Author:      Chris Jones-Gill - KISS Web Design
- * Version:     0.4
+ * Version:     0.5
  * Created:     June 2012
  * Copyright:   KISS Web Design - (C) 2012 - All rights reserved
  * License:     This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
  *              http://creativecommons.org/licenses/by-sa/3.0/
  * ===================================================================== */
+
+.container {
+	word-wrap: break-word;
+}
 
 .heading_hide:before {
     content: 'Hide ';
@@ -41,6 +45,7 @@
 .spanall {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 .custom {
@@ -52,12 +57,27 @@
 }
 
 .inlineIcon {
-    display: inline-block;
-    width: 4%;
-    vertical-align: top;
+	display: inline-block;
+	width: 4%;
+	vertical-align: top;
 }
 
 .afterInlineIcon {
-    display: inline-block;
-    width: 95%;
+	display: inline-block;
+	width: 95%;
+}
+
+.btn-small-spanall {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    padding: 5px 9px;
+    width:97%;
+    margin-left: 0;
+}
+
+#scrollUp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
 }
