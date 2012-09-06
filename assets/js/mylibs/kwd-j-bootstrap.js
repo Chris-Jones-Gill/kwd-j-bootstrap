@@ -68,10 +68,12 @@ $.noConflict();
  * ===================================================================== */
 $(window).on("debouncedresize", function(event) {
         var width = jQuery(window).width(),
-	rownums = new Array(2, 3, 4, 6, 7, 10, 11, 12, 13);
+	rownums = new Array(3, 4, 6, 7, 10, 11, 12, 13);
         if (width > 980) {
-		jQuery.each(rownums, function() {
-			jQuery('#collapserow' + this).collapse('show');
+		jQuery.each(rownums, function() {  
+			if(!jQuery('#collapserow' + this).hasClass('in')) {
+				jQuery('#collapserow' + this).collapse('show');
+			}
 		});            
         }
 });
@@ -106,7 +108,7 @@ $(window).on("debouncedresize", function(event) {
             rowheading.removeClass('heading_hide');
         });
     }
-    rowSwitch(0, 2);
+    //rowSwitch(0, 2);
     rowSwitch(0, 3);
     rowSwitch(0, 4);
     rowSwitch(0, 6);

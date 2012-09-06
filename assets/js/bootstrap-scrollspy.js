@@ -1,5 +1,5 @@
 /* =============================================================
- * bootstrap-scrollspy.js v2.0.4-kwd
+ * bootstrap-scrollspy.js v2.1.0-kwd
  * 
  * modified for compatibility with Jooomla menus
  * see in-line comments for changes, tagged 'KWD'.
@@ -8,7 +8,7 @@
  * ============================================================== */
 
 /* =============================================================
- * bootstrap-scrollspy.js v2.0.4
+ * bootstrap-scrollspy.js v2.1.0
  * http://twitter.github.com/bootstrap/javascript.html#scrollspy
  * =============================================================
  * Copyright 2012 Twitter, Inc.
@@ -125,7 +125,7 @@
           .parent('li')
           .addClass('active')
 
-        if (active.parent('.dropdown-menu'))  {
+        if (active.parent('.dropdown-menu').length)  {
           active = active.closest('li.dropdown').addClass('active')
         }
 
@@ -138,7 +138,7 @@
  /* SCROLLSPY PLUGIN DEFINITION
   * =========================== */
 
-  $.fn.scrollspy = function ( option ) {
+  $.fn.scrollspy = function (option) {
     return this.each(function () {
       var $this = $(this)
         , data = $this.data('scrollspy')
@@ -158,7 +158,7 @@
  /* SCROLLSPY DATA-API
   * ================== */
 
-  $(function () {
+  $(window).on('load', function () {
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this)
       $spy.scrollspy($spy.data())

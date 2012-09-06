@@ -1,5 +1,5 @@
 /* ===========================================================
- * bootstrap-popover.js v2.0.4-kwd -- Add destroy function
+ * bootstrap-popover.js v2.1.0
  * http://twitter.github.com/bootstrap/javascript.html#popovers
  * ===========================================================
  * Copyright 2012 Twitter, Inc.
@@ -26,7 +26,7 @@
  /* POPOVER PUBLIC CLASS DEFINITION
   * =============================== */
 
-  var Popover = function ( element, options ) {
+  var Popover = function (element, options) {
     this.init('popover', element, options)
   }
 
@@ -43,8 +43,8 @@
         , title = this.getTitle()
         , content = this.getContent()
 
-      $tip.find('.popover-title')[this.isHTML(title) ? 'html' : 'text'](title)
-      $tip.find('.popover-content > *')[this.isHTML(content) ? 'html' : 'text'](content)
+      $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
+      $tip.find('.popover-content > *')[this.options.html ? 'html' : 'text'](content)
 
       $tip.removeClass('fade top bottom left right in')
     }
@@ -59,7 +59,7 @@
         , o = this.options
 
       content = $e.attr('data-content')
-        || (typeof o.content == 'function' ? o.content.call($e[0]) : o.content)
+        || (typeof o.content == 'function' ? o.content.call($e[0]) :  o.content)
 
       return content
     }
@@ -72,9 +72,7 @@
     }
 
   , destroy: function () {
-      var $e = this.$element
-      $e.off()
-      $e.removeData('popover')
+      this.hide().$element.off('.' + this.type).removeData(this.type)
     }
 
   })
@@ -97,6 +95,7 @@
 
   $.fn.popover.defaults = $.extend({} , $.fn.tooltip.defaults, {
     placement: 'right'
+  , trigger: 'click'
   , content: ''
   , template: '<div class="popover"><div class="arrow"></div><div class="popover-inner"><h3 class="popover-title"></h3><div class="popover-content"><p></p></div></div></div>'
   })

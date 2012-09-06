@@ -8,12 +8,12 @@
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>0.1.5</version>	
+	<version>1.0.0</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
 			<p>It follows the <a href="http://www.w3.org/TR/mobile-bp/#OneWeb">'One Web'</a> philosophy - designing websites that can be delivered to all screens and devices, present and future</p>
-			<p>It is based on <a href="https://github.com/twitter/bootstrap">twitter/bootstrap</a> version 2.0.3</p>
+			<p>It is based on <a href="https://github.com/twitter/bootstrap">twitter/bootstrap</a> version 2.1.0</p>
 			<p>Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own <a href="https://github.com/KISS-Web-Design/bootstrap">baseline bootstrap</a>.</p>
 			<p>This template is taken from our baseline, not the original twitter/bootstrap</p>
 		]]>

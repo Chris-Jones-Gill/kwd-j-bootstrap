@@ -2,9 +2,9 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.0.17
+ * Version: 		1.0.0
  * Created: 		June 2012
- * This Version:	August 2012
+ * This Version:	September 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
  * License:			Apache Version 2.0 http://www.apache.org/licenses/LICENSE-2.0
 /* ===================================================================== */
@@ -73,11 +73,11 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <?php } ?>
 </head>
 
-<body class="<?php echo htmlspecialchars($bodyFontFamily); ?>" data-spy="scroll" data-target=".subnav" data-offset="50">
+<body class="<?php echo htmlspecialchars($bodyFontFamily); ?>" data-spy="scroll" data-target="#scrollSpyNav" data-offset="120" >
 
 <?php // Position nav-top ?>
 <?php if ($navTop > 0) { ?>
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
 	        	<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -91,10 +91,8 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 		</div>
 	</div>
 <?php } ?>
-
-<?php // container for page contents ?>
-<div class="container">
 <noscript>JavaScript is unavailable or disabled. This site will still function, but some useful features will not work.</noscript>
+<div id="outer-container">
 <?php // Position nav-r1 ?>
 <?php if ($navR1 > 0) { ?>
 	<div id="navr1" class="spanall">
@@ -106,13 +104,13 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 
 <?php // Row 2 positions ?>
 <?php if ($row2Active > 0) { ?>
-	<div id="row2" class="spanall">
-	
-		<div id="row2_collapse_heading" class="accordion-heading visible-phone visible-tablet">
+	<div id="row2" class="hero">
+<div class="container">	
+<?php /*		<div id="row2_collapse_heading" class="accordion-heading visible-phone visible-tablet">
 			<a id="row2_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow2" data-toggle="collapse"><?php echo htmlspecialchars($rowTwoName) ?></a><br /><br />
 		</div>
 		<div id="collapserow2" class="collapserow2 collapse in">
-			<header id="header-row" class="jumbotron">
+*/ ?>			<header id="header-row" class="jumbotron">
 				<?php // Position section-r2-1 - use as logo or header ?>
 				<?php if ($sectionR2a > 0) { ?>
 					<div id="section-r2-1">
@@ -165,9 +163,14 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 					</div>
 				<?php } ?>
 			</header>
-		</div>
+		<?php // </div> ?>
+</div>
 	</div>
 <?php } ?>
+
+<?php // container for page contents ?>
+<div class="container">
+
 
 <?php // Position nav-r3 ?>
 <?php if ($navR3 > 0) { ?>
@@ -177,7 +180,7 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 			<a id="row3_collapse_text" class="heading_hide btn btn-small-spanall" href="#collapserow3" data-toggle="collapse">Menu</a><br /><br />
 		</div>
 		<div id="collapserow3" class="collapserow3 collapse in">
-			<nav id="nav-r3" role="navigation" class="subnav">
+			<nav id="scrollSpyNav" role="navigation" class="subnav">
 				<jdoc:include type="modules" name="nav-r3" style="html5" />
 			</nav>
 		</div>
@@ -352,10 +355,10 @@ include_once (dirname(__FILE__).DS.'functions/logic.php');
 <div id="mainRow" class="spanall">                               
 	<?php // Position section-main-left ?>
 	<?php if ($sectionMainLeft > 0) { ?>
-		<div id="section-main-left" class="noLeftMargin  span<?php echo htmlspecialchars($mainLeftCols); ?>" role="complementary">
+		<div id="scrollSpyNav" class="noLeftMargin  span<?php echo htmlspecialchars($mainLeftCols); ?> onePxHigh" role="complementary">
 			<jdoc:include type="modules" name="section-main-left" style="html5" />
 		</div>
-		<div id="section-main" role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?>">
+		<div id="section-main"role="main" class="span<?php echo htmlspecialchars($mainContentCols); ?> offset<?php echo htmlspecialchars($mainLeftCols); ?>">
 			<jdoc:include type="message" />
 			<jdoc:include type="component" />
 		</div>
@@ -650,6 +653,7 @@ else { ?>
 <jdoc:include type="modules" name="debug"/>
 
 </div> <?php // container ?>
+</div <?php // outer-container ?>
 <div id="scrollUp" class="btn btn-large" style="display: none;">Top</div>
 <?php // Scripts ?>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>
@@ -659,6 +663,7 @@ else { ?>
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/google-code-prettify/prettify.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-transition.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-affix.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-alert.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-modal.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/bootstrap-dropdown.js"></script>
