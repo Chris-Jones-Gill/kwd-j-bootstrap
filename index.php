@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		1.0.0
+ * Version: 		1.0.1
  * Created: 		June 2012
  * This Version:	September 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -653,7 +653,7 @@ else { ?>
 <jdoc:include type="modules" name="debug"/>
 
 </div> <?php // container ?>
-</div <?php // outer-container ?>
+</div> <?php // outer-container ?>
 <div id="scrollUp" class="btn btn-large" style="display: none;">Top</div>
 <?php // Scripts ?>
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/assets/js/mylibs/plugins.js"></script>

@@ -2,7 +2,7 @@
 /* =====================================================================
  * Template:		kwd-j-bootstrap :: for Joomla! 2.5
  * Author: 			Chris Jones-Gill - KISS Web Design
- * Version: 		0.1.2
+ * Version: 		1.0.1
  * Created: 		June 2012
  * This Version:	August 2012
  * Copyright:		KISS Web Design - (C) 2012 - All rights reserved
@@ -350,7 +350,7 @@ if ($googleWebFont3) {
     
 // Musthave JS
 
-  $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');
+  $doc->addCustomTag('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.js"></script>');
 
 // favicon
   $doc->addCustomTag('<link rel="shortcut icon" href="'.$template.'/assets/ico/favicon.ico">');
