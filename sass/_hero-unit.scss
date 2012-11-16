@@ -1,0 +1,26 @@
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+  @include rems(padding, 60px);
+  @include rems(margin-bottom, 30px);
+  @include rems(font-size, 18px);
+  font-weight: 200;
+  @include rems(line-height, $baseLineHeight * 1.5);
+  color: $heroUnitLeadColor;
+  background-color: $heroUnitBackground;
+  @include border-radius(6px);
+  @include border-radius(toRem(6px));
+  h1 {
+    margin-bottom: 0;
+    @include rems(font-size, 60px);
+    line-height: 1;
+    color: $heroUnitHeadingColor;
+    @include rems(letter-spacing, -1px);
+  }
+  li {
+    @include rems(line-height, $baseLineHeight * 1.5); // Reset since we specify in type.scss
+  }
+}

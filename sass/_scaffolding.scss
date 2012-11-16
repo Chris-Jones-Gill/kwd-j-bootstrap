@@ -1,0 +1,56 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: $baseFontFamily;
+  @include rems(font-size, $baseFontSize);
+  @include rems(line-height, $baseLineHeight);
+  color: $textColor;
+  background-color: $bodyBackground;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+a:hover {
+  color: $linkColorHover;
+  text-decoration: underline;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  @include border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  @include rems(padding, 4px);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: toRem(1px) solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  border: toRem(1px) solid rgba(0,0,0,.2);
+  @include box-shadow(0 1px 3px rgba(0,0,0,.1));
+  @include box-shadow(0 toRem(1px) toRem(3px) rgba(0,0,0,.1));
+}
+
+// Perfect circle
+.img-circle {
+  @include border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+  @include border-radius(toRem(500px)); // crank the border-radius so it works with most reasonably sized images
+}

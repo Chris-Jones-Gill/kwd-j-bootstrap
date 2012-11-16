@@ -1,0 +1,69 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  padding: toRem(8px) toRem(35px) toRem(8px) toRem(14px);
+  @include rems(margin-bottom, $baseLineHeight);
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-shadow: 0 toRem(1px) 0 rgba(255,255,255,.5);
+  background-color: $warningBackground;
+  border: 1px solid $warningBorder;
+  border: toRem(1px) solid $warningBorder;
+  @include border-radius($baseBorderRadius);
+  @include border-radius(toRem($baseBorderRadius));
+  color: $warningText;
+}
+.alert h4 {
+  margin: 0;
+}
+
+// Adjust close link position
+.alert .close {
+  position: relative;
+  @include rems(top, -2px);
+  @include rems(right, -21px);
+  @include rems(line-height, $baseLineHeight);
+}
+
+
+// Alternate styles
+// -------------------------
+
+.alert-success {
+  background-color: $successBackground;
+  border-color: $successBorder;
+  color: $successText;
+}
+.alert-danger,
+.alert-error {
+  background-color: $errorBackground;
+  border-color: $errorBorder;
+  color: $errorText;
+}
+.alert-info {
+  background-color: $infoBackground;
+  border-color: $infoBorder;
+  color: $infoText;
+}
+
+
+// Block alerts
+// -------------------------
+
+.alert-block {
+  @include rems(padding-top, 14px);
+  @include rems(padding-bottom, 14px);
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  @include rems(margin-top, 5px);
+}

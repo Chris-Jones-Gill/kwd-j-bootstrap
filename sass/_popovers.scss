@@ -1,0 +1,133 @@
+//
+// Popovers
+// --------------------------------------------------
+
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindexPopover;
+  display: none;
+  @include rems(width, 236px);
+  @include rems(padding, 1px);
+  background-color: $popoverBackground;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: toRem(1px) solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+  border: toRem(1px) solid rgba(0,0,0,.2);
+  @include border-radius(6px);
+  @include border-radius(toRem(6px));
+  @include box-shadow(0 5px 10px rgba(0,0,0,.2));
+  @include box-shadow(0 toRem(5px) toRem(10px) rgba(0,0,0,.2));
+
+  // Offset the popover to account for the popover arrow
+  &.top     { @include rems(margin-top, -10px); }
+  &.right   { @include rems(margin-left, 10px); }
+  &.bottom  { @include rems(margin-top, 10px); }
+  &.left    { @include rems(margin-left, -10px); }
+
+}
+
+.popover-title {
+  margin: 0; // reset heading margin
+  padding: 8px 14px;
+  padding: toRem(8px) toRem(14px);
+  @include rems(font-size, 14px);
+  font-weight: normal;
+  @include rems(line-height, 18px);
+  background-color: $popoverTitleBackground;
+  border-bottom: 1px solid darken($popoverTitleBackground, 5%);
+  border-bottom: toRem(1px) solid darken($popoverTitleBackground, 5%);
+  @include border-radius(5px 5px 0 0);
+  @include border-radius(toRem(5px) toRem(5px) 0 0);
+}
+
+.popover-content {
+  padding: 9px 14px;
+  padding: toRem(9px) toRem(14px);
+  p, ul, ol {
+    margin-bottom: 0;
+  }
+}
+
+// Arrows
+.popover .arrow,
+.popover .arrow:after {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover .arrow:after {
+  content: "";
+  z-index: -1;
+}
+
+.popover {
+  &.top .arrow {
+    @include rems(bottom, -$popoverArrowWidth);
+    left: 50%;
+    @include rems(margin-left, -$popoverArrowWidth);
+    border-width: $popoverArrowWidth $popoverArrowWidth 0;
+    border-width: toRem($popoverArrowWidth) toRem($popoverArrowWidth) 0;
+    border-top-color: $popoverArrowColor;
+    &:after {
+      border-width: $popoverArrowOuterWidth $popoverArrowOuterWidth 0;
+      border-width: toRem($popoverArrowOuterWidth) toRem($popoverArrowOuterWidth) 0;
+      border-top-color: $popoverArrowOuterColor;
+      @include rems(bottom, -1px);
+      @include rems(left, -$popoverArrowOuterWidth);
+    }
+  }
+  &.right .arrow {
+    top: 50%;
+    @include rems(left, -$popoverArrowWidth);
+    @include rems(margin-top, -$popoverArrowWidth);
+    border-width: $popoverArrowWidth $popoverArrowWidth $popoverArrowWidth 0;
+    border-width: toRem($popoverArrowWidth) toRem($popoverArrowWidth) toRem($popoverArrowWidth) 0;
+    border-right-color: $popoverArrowColor;
+    &:after {
+      border-width: $popoverArrowOuterWidth $popoverArrowOuterWidth $popoverArrowOuterWidth 0;
+      border-width: toRem($popoverArrowOuterWidth) toRem($popoverArrowOuterWidth) toRem($popoverArrowOuterWidth) 0;
+      border-right-color: $popoverArrowOuterColor;
+      @include rems(bottom, -$popoverArrowOuterWidth);
+      @include rems(left, -1px);
+    }
+  }
+  &.bottom .arrow {
+    @include rems(top, -$popoverArrowWidth);
+    left: 50%;
+    @include rems(margin-left, -$popoverArrowWidth);
+    border-width: 0 $popoverArrowWidth $popoverArrowWidth;
+    border-width: 0 toRem($popoverArrowWidth) toRem($popoverArrowWidth);
+    border-bottom-color: $popoverArrowColor;
+    &:after {
+      border-width: 0 $popoverArrowOuterWidth $popoverArrowOuterWidth;
+      border-width: 0 toRem($popoverArrowOuterWidth) toRem($popoverArrowOuterWidth);
+      border-bottom-color: $popoverArrowOuterColor;
+      @include rems(top, -1px);
+      @include rems(left, -$popoverArrowOuterWidth);
+    }
+  }
+  &.left .arrow {
+    top: 50%;
+    @include rems(right, -$popoverArrowWidth);
+    @include rems(margin-top, -$popoverArrowWidth);
+    border-width: $popoverArrowWidth 0 $popoverArrowWidth $popoverArrowWidth;
+    border-width: toRem($popoverArrowWidth) 0 toRem($popoverArrowWidth) toRem($popoverArrowWidth);
+    border-left-color: $popoverArrowColor;
+    &:after {
+      border-width: $popoverArrowOuterWidth 0 $popoverArrowOuterWidth $popoverArrowOuterWidth;
+      border-width: toRem($popoverArrowOuterWidth) 0 toRem($popoverArrowOuterWidth) toRem($popoverArrowOuterWidth);
+      border-left-color: $popoverArrowOuterColor;
+      @include rems(bottom, -$popoverArrowOuterWidth);
+      @include rems(right, -1px);
+    }
+  }
+}

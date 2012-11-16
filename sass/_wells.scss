@@ -1,0 +1,34 @@
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  @include rems(min-height, 20px);
+  @include rems(padding, 19px);
+  @include rems(margin-bottom, 20px);
+  background-color: $wellBackground;
+  border: 1px solid darken($wellBackground, 7%);
+  border: toRem(1px) solid darken($wellBackground, 7%);
+  @include border-radius($baseBorderRadius);
+  @include border-radius(toRem($baseBorderRadius));
+  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.05));
+  @include box-shadow(inset 0 toRem(1px) toRem(1px) rgba(0,0,0,.05));
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+}
+
+// Sizes
+.well-large {
+  @include rems(padding, 24px);
+  @include border-radius($borderRadiusLarge);
+  @include border-radius(toRem($borderRadiusLarge));
+}
+.well-small {
+  @include rems(padding, 9px);
+  @include border-radius($borderRadiusSmall);
+  @include border-radius(toRem($borderRadiusSmall));
+}
