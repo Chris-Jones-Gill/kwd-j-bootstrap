@@ -5,7 +5,7 @@ This is a responsive, HTML5 template for Joomla! 2.5 from KISS Web Design.
   
 It follows the ['One Web'](http://www.w3.org/TR/mobile-bp/#OneWeb) philosophy - designing websites that can be delivered to all screens and devices, present and future
 
-It is based on [twitter/bootstrap](https://github.com/twitter/bootstrap) version 2.0.3
+It is based on [twitter/bootstrap](https://github.com/twitter/bootstrap) version 2.2.1
 
 Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own [baseline bootstrap](https://github.com/KISS-Web-Design/bootstrap).  
   
