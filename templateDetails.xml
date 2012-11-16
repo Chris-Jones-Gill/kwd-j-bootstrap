@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site">
 	<name>kwd-j-bootstrap</name>
-	<creationDate>June 25 2012</creationDate>
+	<creationDate>November 16 2012</creationDate>
 	<author>Chris Jones-Gill</author>
 	<authorEmail>chris.jones-gill@kisswebdesign.co.uk</authorEmail>
 	<authorUrl>http://kisswebdesign.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Chris Jones-Gill | KISS Web Design | All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>1.0.1</version>	
+	<version>1.2.0</version>	
 	<description>
 		<![CDATA[
 			<p>This is a responsive, HTML5 template for Joomla! 2.5 from <a href="http://kisswebdesign.co.uk">KISS Web Design</a>.</p>
