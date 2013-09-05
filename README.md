@@ -19,7 +19,7 @@ Contact info
  * Via github:		
 	+ [https://github.com/KISS-Web-Design](https://github.com/KISS-Web-Design "Link to KISS Web Design Github page")  
  * Via website:	
-	+ [http://kisswebdesign.co.uk](http://kisswebdesign.co.uk/contact2.php "Link to the KISS Web Design contact page")  
+	+ [http://kisswebdesign.co.uk](http://kisswebdesign.co.uk/Contact "Link to the KISS Web Design contact page")  
  * Via Twitter:	
 	+ [@KissWebDesign](https://twitter.com/KissWebDesign "Twitter link for KISS Web Design")  
  * Via Facebook:	
