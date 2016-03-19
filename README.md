@@ -1,42 +1,18 @@
+THIS PROJECT IS DEPRECATED
+==========================
+
 About This Project
 ==================
 
-This is a responsive, HTML5 template for Joomla! 2.5 from KISS Web Design.  
+This is a responsive, HTML5 template for Joomla! 2.5  
   
 It follows the ['One Web'](http://www.w3.org/TR/mobile-bp/#OneWeb) philosophy - designing websites that can be delivered to all screens and devices, present and future
 
 It is based on [twitter/bootstrap](https://github.com/twitter/bootstrap) version 2.2.1
 
-Prior to creating this template KISS Web Design forked twitter/bootstrap and created our own [baseline bootstrap](https://github.com/KISS-Web-Design/bootstrap).  
-  
-This template is taken from our baseline, not the original twitter/bootstrap
-  
 ------------    
   
-Contact info  
-============  
-  
- * Via github:		
-	+ [https://github.com/KISS-Web-Design](https://github.com/KISS-Web-Design "Link to KISS Web Design Github page")  
- * Via website:	
-	+ [http://kisswebdesign.co.uk](http://kisswebdesign.co.uk/Contact "Link to the KISS Web Design contact page")  
- * Via Twitter:	
-	+ [@KissWebDesign](https://twitter.com/KissWebDesign "Twitter link for KISS Web Design")  
- * Via Facebook:	
-	+ [http://www.facebook.com/pages/Kiss-Web-Design-Ltd](http://www.facebook.com/pages/Kiss-Web-Design-Ltd/185807241443994 "Link to the KISS Web Design Facebook Page")  
-  
------------- 
-    
-Quick start  
-===========  
-  
- * Clone the git repo
-	+ git clone git://github.com/KISS-Web-Design/kwd-j-bootstrap.git
- * Or download it
-	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master](https://github.com/KISS-Web-Design/kwd-j-bootstrap/zipball/master "Download link for the project on Github")
-  
-------------  
-    
+
 User Information
 ================
 
@@ -119,31 +95,10 @@ FEATURES
 		- nav-bottom : fixed to the bottom of the screen
   
 ------------  
-    
-PLANNED FEATURES
-================
-  
- * 3 selectable icon fonts - general purpose, social networking light, social networking dark
- * Logo upload and select
- * MixPanel Analytics built-in
- * Accessibility features
-  
-------------  
-      
-Contributing
-============
-  
- * If you want to contribute please feel free to do so. There are many ways to help:
- 	+ Raise an issue on github [https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues](https://github.com/KISS-Web-Design/kwd-j-bootstrap/issues "Link to the issues page of the project on Github")
- 	+ Sending pull requests for bug fixes or new features and improvements.
-      
-------------  
-  
+
 Project Information
 ===================
-  
- * Source: 
-	+ [https://github.com/KISS-Web-Design/kwd-j-bootstrap](https://github.com/KISS-Web-Design/kwd-j-bootstrap "Link to the project page on Github")
+
  * Live demo:
 	+ [http://kwd-j-bootstrap.stempsite.co.uk](http://kwd-j-bootstrap.stempsite.co.uk "Link to the demo site")
   
@@ -227,6 +182,6 @@ Copyright belongs to the original authors in all cases.
 Modifications to original files
 ===============================
   
-Where modifications have been made, those modifications are Copyright 2012 KISS Web Design, Ltd.
+Where modifications have been made, those modifications are Copyright (2012-present) Chris Jones-Gill.
 
 This only applies to the modifications, not to the rest of the content, where the copyright is retained by the original copyright holder.
